@@ -2,18 +2,21 @@
   <div>
     <Navbar />
     <Main />
+    <Services />
   </div>
 </template>
 
 <script>
 import Navbar from "./components/Navbar.vue";
 import Main from "./views/Main.vue";
+import Services from "./views/Services.vue";
 
 export default {
   name: "App",
   components: {
     Navbar,
     Main,
+    Services,
   },
 };
 </script>

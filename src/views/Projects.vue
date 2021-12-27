@@ -50,18 +50,18 @@ export default {};
 <style lang="scss" scoped>
 .container {
   background-color: $darkblue;
-  height: 100vh;
   width: 100%;
+  height: 70rem;
   display: grid;
-  place-items: center;
+  justify-items: center;
+  position: relative;
   .wrapper {
     width: 80%;
-    display: grid;
-    place-items: center;
+    text-align: center;
     h4 {
       color: $white;
-      margin-top: 10rem;
       font-size: 1.65rem;
+      margin-top: 10rem;
       font-weight: 200;
       letter-spacing: 0.2rem;
       text-transform: uppercase;
@@ -70,8 +70,47 @@ export default {};
       color: $white;
       font-size: 5rem;
       font-weight: 600;
-      margin: 2rem 0 7.5rem 0;
+      margin: 0;
       text-transform: uppercase;
+    }
+    .slider__wrapper {
+      display: grid;
+      grid-template-columns: 10% 80% 10%;
+      gap: 2rem;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0);
+      bottom: -10rem;
+      justify-content: space-between;
+      width: 80%;
+      .img-slider {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+        img {
+          max-width: 38rem;
+          height: 100%;
+        }
+      }
+      .left-arrow {
+        justify-self: start;
+        align-self: center;
+        &:hover svg path {
+          fill: $white;
+          transition: all 0.5s ease-out;
+          cursor: pointer;
+        }
+      }
+      .right-arrow {
+        justify-self: end;
+        align-self: center;
+        &:hover svg path {
+          fill: $white;
+          transition: all 0.5s ease-out;
+          cursor: pointer;
+        }
+      }
     }
   }
 }

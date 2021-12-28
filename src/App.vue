@@ -4,6 +4,8 @@
     <Main />
     <Services />
     <Projects />
+    <Skills />
+    <About />
   </div>
 </template>
 
@@ -12,6 +14,8 @@ import Navbar from "./components/Navbar.vue";
 import Main from "./views/Main.vue";
 import Services from "./views/Services.vue";
 import Projects from "./views/Projects.vue";
+import Skills from "./views/Skills.vue";
+import About from "./views/About.vue";
 
 export default {
   name: "App",
@@ -20,6 +24,8 @@ export default {
     Main,
     Services,
     Projects,
+    Skills,
+    About,
   },
 };
 </script>

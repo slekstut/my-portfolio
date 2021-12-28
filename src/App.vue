@@ -6,6 +6,7 @@
     <Projects />
     <Skills />
     <About />
+    <Contact />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import Services from "./views/Services.vue";
 import Projects from "./views/Projects.vue";
 import Skills from "./views/Skills.vue";
 import About from "./views/About.vue";
+import Contact from "./views/Contact.vue";
 
 export default {
   name: "App",
@@ -26,6 +28,7 @@ export default {
     Projects,
     Skills,
     About,
+    Contact,
   },
 };
 </script>

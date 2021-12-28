@@ -68,8 +68,12 @@ export default {};
       }
     }
     .portfolio-image {
-      justify-self: end;
+      justify-self: center;
+      align-self: center;
       z-index: 1000;
+      img {
+        width: 50%;
+      }
     }
   }
 }

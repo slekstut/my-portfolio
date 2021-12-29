@@ -11,34 +11,61 @@
         <textarea
           class="floating-input floating-textarea"
           placeholder=" "
-                  ></textarea>
+        ></textarea>
         <span class="highlight"></span>
         <label>your message</label>
       </div>
-      <button>send</button>
+      <button>
+        send<span
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="33.621"
+            height="33.621"
+            viewBox="0 0 33.621 33.621"
+          >
+            <g transform="translate(-1.5 -0.879)">
+              <path
+                d="M33,3,16.5,19.5"
+                fill="none"
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+              />
+              <path
+                d="M33,3,22.5,33l-6-13.5L3,13.5Z"
+                fill="none"
+                stroke="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="3"
+              />
+            </g></svg
+        ></span>
+      </button>
     </form>
   </div>
 </template>
 
 <script>
 export default {
-    name: "Form"
+  name: "Form",
 };
 </script>
 
 <style lang="scss" scoped>
 form {
   width: 35%;
+  margin-top: 13rem;
   .floating-label {
     position: relative;
     margin-bottom: 1.3rem;
-
   }
   .floating-input {
     font-size: 1.7rem;
     font-family: $font;
     font-weight: 300;
-    letter-spacing: .15rem;
+    letter-spacing: 0.05rem;
     color: $white;
     padding: 0.1rem 0;
     margin-bottom: 4rem;
@@ -101,7 +128,31 @@ form {
     animation: 0.3s ease;
   }
   button {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    gap: 1.2rem;
+    align-items: center;
+    justify-content: center;  
+    width: 100%;
     margin-top: 2rem;
+    background: transparent;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    border: 2px solid $white;
+    padding: 1rem 1.5rem;
+    color: $white;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: capitalize;
+    transition-duration: 0.3s;
+    &:hover span svg path{
+        stroke: $purple;
+    }
+    &:hover {
+      background-color: $white;
+      color: $purple;
+      cursor: pointer;
+    }
   }
 }
 </style>

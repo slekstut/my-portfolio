@@ -47,6 +47,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: $fontSize;
+  overflow-x: hidden;
 }
 
 #app {

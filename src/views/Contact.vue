@@ -14,7 +14,7 @@
             <Form></Form>
           </div>
         </div>
-        <div>
+        <div class="contact-links">
           <div class="links">
             <a href="#">About</a>
             <a href="#">Services</a>
@@ -153,7 +153,7 @@ export default {
 .container {
   margin-top: 10%;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: grid;
   justify-items: center;
   background-image: url("../assets/img/contact-bg.png");
@@ -182,9 +182,49 @@ export default {
     }
   }
   .contact-form {
-    height: 100%;
     width: 100%;
-    margin-top: 5rem;
+    margin: 10rem 0;
+  }
+  .contact-links {
+    display: grid;
+    justify-items: end;
+    align-items: end;
+    margin-bottom: 5rem;
+    .links {
+      grid-row: span 3;
+      a {
+        color: $graylight;
+        font-size: 1.5rem;
+        margin-right: 1.5rem;
+        text-decoration: none;
+         &:hover {
+          color: $purple;
+          opacity: 0.6;
+          cursor: pointer;
+        }
+      }
+    }
+    .socials {
+    align-self: center;
+      svg {
+        margin-right: 1.5rem;
+        .b {
+        fill: $graylight;
+        
+        }
+        &:hover .b {
+        fill: $purple;
+        transition-duration: 0.3s;
+          cursor: pointer;
+        }
+        &:hover .a {
+        fill: $graylight;
+        transition-duration: 0.3s;
+          cursor: pointer;
+        }
+        
+      }
+    }
   }
 }
 </style>

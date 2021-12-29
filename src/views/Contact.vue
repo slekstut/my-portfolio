@@ -144,8 +144,8 @@
 import Form from "../components/Form.vue";
 
 export default {
-    name: "Contact",
-    components: {Form}
+  name: "Contact",
+  components: { Form },
 };
 </script>
 
@@ -184,6 +184,7 @@ export default {
   .contact-form {
     height: 100%;
     width: 100%;
+    margin-top: 5rem;
   }
 }
 </style>

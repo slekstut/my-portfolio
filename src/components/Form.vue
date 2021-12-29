@@ -1,19 +1,19 @@
 <template>
   <div>
-    <form class="floating-form">
+    <form>
       <div class="floating-label">
         <input class="floating-input" type="text" placeholder=" " />
         <span class="highlight"></span>
-        <label>Text</label>
+        <label>your email</label>
       </div>
 
       <div class="floating-label">
         <textarea
           class="floating-input floating-textarea"
           placeholder=" "
-        ></textarea>
+                  ></textarea>
         <span class="highlight"></span>
-        <label>Textarea</label>
+        <label>your message</label>
       </div>
       <button>send</button>
     </form>
@@ -27,18 +27,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.floating-form {
-  width: 25rem;
+form {
+  width: 35%;
   .floating-label {
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 1.3rem;
+
   }
   .floating-input {
-    font-size: 1.8rem;
-    padding: 0.2rem;
+    font-size: 1.7rem;
+    font-family: $font;
+    font-weight: 300;
+    letter-spacing: .15rem;
+    color: $white;
+    padding: 0.1rem 0;
+    margin-bottom: 4rem;
     display: block;
     width: 100%;
-    height: 30px;
+    height: 3.2rem;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid $white;
@@ -49,9 +55,11 @@ export default {
   }
 
   label {
-    color: $white;
-    font-size: 0.8rem;
+    color: $graylight;
+    font-family: $font;
+    font-size: 1.5rem;
     font-weight: 400;
+    text-transform: capitalize;
     position: absolute;
     pointer-events: none;
     left: 5px;
@@ -62,19 +70,19 @@ export default {
   }
   .floating-input:focus ~ label,
   .floating-input:not(:placeholder-shown) ~ label {
-    top: -18px;
-    font-size: 14px;
+    top: -2rem;
+    font-size: 1.2rem;
     color: $white;
   }
   .floating-input:focus ~ .bar:before,
-  .floating-input:focus ~ .bar:after,
-  .floating-select:focus ~ .bar:before,
-  .floating-select:focus ~ .bar:after {
+  .floating-input:focus ~ .bar:after {
     width: 50%;
   }
   .floating-textarea {
-    min-height: 30px;
-    max-height: 260px;
+    font-family: $font;
+    overflow: scroll;
+    min-height: 5rem;
+    max-height: 20rem;
     overflow: hidden;
     overflow-x: hidden;
   }
@@ -91,6 +99,9 @@ export default {
     -webkit-animation: 0.3s ease;
     -moz-animation: 0.3s ease;
     animation: 0.3s ease;
+  }
+  button {
+    margin-top: 2rem;
   }
 }
 </style>

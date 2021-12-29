@@ -7,6 +7,7 @@
     <Skills />
     <About />
     <Contact />
+    <Footer />
   </div>
 </template>
 
@@ -18,6 +19,7 @@ import Projects from "./views/Projects.vue";
 import Skills from "./views/Skills.vue";
 import About from "./views/About.vue";
 import Contact from "./views/Contact.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   name: "App",
@@ -29,6 +31,7 @@ export default {
     Skills,
     About,
     Contact,
+    Footer,
   },
 };
 </script>

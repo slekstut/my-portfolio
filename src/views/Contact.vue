@@ -153,19 +153,20 @@ export default {
 .container {
   margin-top: 10%;
   width: 100%;
-  height: 100%;
   display: grid;
   justify-items: center;
   background-image: url("../assets/img/contact-bg.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  position:relative;
   .wrapper {
     width: 80%;
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 2rem;
     margin-top: 6.5rem;
+    margin-bottom: 6.5rem;
     h1 {
       color: $white;
       font-size: 5rem;
@@ -189,7 +190,6 @@ export default {
     display: grid;
     justify-items: end;
     align-items: end;
-    margin-bottom: 5rem;
     .links {
       grid-row: span 3;
       a {
@@ -205,7 +205,11 @@ export default {
       }
     }
     .socials {
-    align-self: center;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1.2rem;
+    align-self: start;
+    margin-top: 2rem;
       svg {
         margin-right: 1.5rem;
         .b {

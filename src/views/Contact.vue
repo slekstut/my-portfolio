@@ -159,7 +159,7 @@ export default {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  position:relative;
+  position: relative;
   .wrapper {
     width: 80%;
     display: grid;
@@ -191,13 +191,17 @@ export default {
     justify-items: end;
     align-items: end;
     .links {
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      gap: 1.5rem;
+      align-self: end;
       grid-row: span 3;
       a {
         color: $graylight;
         font-size: 1.5rem;
-        margin-right: 1.5rem;
         text-decoration: none;
-         &:hover {
+        text-align: center;
+        &:hover {
           color: $purple;
           opacity: 0.6;
           cursor: pointer;
@@ -205,28 +209,25 @@ export default {
       }
     }
     .socials {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    gap: 1.2rem;
-    align-self: start;
-    margin-top: 2rem;
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      gap: 1.2rem;
+      align-self: start;
+      margin-top: 2rem;
       svg {
-        margin-right: 1.5rem;
         .b {
-        fill: $graylight;
-        
+          fill: $graylight;
         }
         &:hover .b {
-        fill: $purple;
-        transition-duration: 0.3s;
+          fill: $purple;
+          transition-duration: 0.3s;
           cursor: pointer;
         }
         &:hover .a {
-        fill: $graylight;
-        transition-duration: 0.3s;
+          fill: $graylight;
+          transition-duration: 0.3s;
           cursor: pointer;
         }
-        
       }
     }
   }

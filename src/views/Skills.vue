@@ -10,7 +10,7 @@
           </div>
           <div>
             <img src="../assets/icons/Icon-simple-css3.svg" alt="css3" />
-            <p>HTML</p>
+            <p>css</p>
           </div>
           <div>
             <img src="../assets/icons/tailwind-css.svg" alt="tailwind" />
@@ -67,6 +67,7 @@ export default {};
     width: 80%;
     position: relative;
     h1 {
+      color: $black;
       font-size: 5rem;
       font-weight: 600;
       margin-bottom: 7.5rem;
@@ -76,9 +77,21 @@ export default {};
       width: 80%;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 5rem;
+      gap: 2rem;
       justify-items: center;
       align-items: center;
+      div {
+        img {
+            width: 100%;
+            margin: 0 auto;
+        }
+        p {
+            font-size: 2rem;
+            color: $black;
+            text-transform: uppercase;
+            text-align: center;
+      }
+      }
     }
     .grid {
       position: absolute;

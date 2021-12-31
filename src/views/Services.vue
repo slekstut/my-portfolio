@@ -118,13 +118,14 @@ export default {};
     place-items: center;
     h4 {
       font-size: 1.65rem;
+      color: $black;
       font-weight: 200;
       letter-spacing: 0.2rem;
       text-transform: uppercase;
       position: relative;
       &:before {
-        content: '';
-        width: .17rem;
+        content: "";
+        width: 0.17rem;
         height: 5.5rem;
         position: absolute;
         background: $black;
@@ -138,6 +139,7 @@ export default {};
     }
     h1 {
       font-size: 5rem;
+      color: $black;
       font-weight: 600;
       margin-bottom: 7.5rem;
       text-transform: capitalize;
@@ -151,18 +153,28 @@ export default {};
         margin: 0 auto;
         display: grid;
         place-items: center;
-        border: 3px $graylight solid;
+        border: 1px $graylight solid;
+        border-radius: 1rem;
         padding: 2.3rem 3.7rem;
+        svg {
+          fill: $black;
+        }
         h5 {
           font-size: 3rem;
+          color: $black;
           font-weight: 600;
           text-transform: capitalize;
           margin: 1.5rem 0;
         }
         p {
           font-size: 1.8rem;
+          color: $black;
           text-align: center;
           margin: 0;
+        }
+        &:hover {
+          border: 1px solid $darkblue;
+          transition-duration: 0.3s;
         }
       }
     }

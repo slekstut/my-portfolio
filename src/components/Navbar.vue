@@ -98,16 +98,13 @@ export default {};
     .contact {
       display: grid;
       place-items: center;
-      background-image: url("../assets/img/contact btn.svg");
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
       button {
         height: 100%;
-        background: none;
+        background: $darkblue;
         font-size: 1.3rem;
+        border: 1px solid transparent;
+        border-radius: 25px;
         text-transform: uppercase;
-        border: none;
         padding: 0.5rem 1.5rem;
         color: $white;
         font-weight: 700;

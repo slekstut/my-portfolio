@@ -2,7 +2,7 @@
   <div>
     <div class="container">
       <div class="wrapper">
-        <div>
+        <div class="split">
           <div>
             <h1>Let's discuss for a project</h1>
             <p>
@@ -19,8 +19,6 @@
             <a href="#">About</a>
             <a href="#">Services</a>
             <a href="#">Portfolio</a>
-          </div>
-          <div class="socials">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="80"
@@ -163,7 +161,7 @@ export default {
   .wrapper {
     width: 80%;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 3fr 1fr;
     gap: 2rem;
     margin-top: 6.5rem;
     margin-bottom: 6.5rem;
@@ -180,22 +178,30 @@ export default {
       color: $white;
       width: 85%;
       margin-top: 3rem;
+      
     }
+    .split {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5rem;
+        .contact-form {
+          width: 100%;
+          margin: 6rem 0;
+        }
+      }
   }
-  .contact-form {
-    width: 100%;
-    margin: 10rem 0;
-  }
+
   .contact-links {
     display: grid;
-    justify-items: end;
     align-items: end;
     .links {
       display: grid;
-      grid-template-rows: repeat(3, 1fr);
-      gap: 1.5rem;
-      align-self: end;
-      grid-row: span 3;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 1fr 1fr;
+      gap: 0.5rem;
+      justify-items: center;
+      align-items: center;
+      margin-bottom: 6rem;
       a {
         color: $graylight;
         font-size: 1.5rem;
@@ -207,13 +213,6 @@ export default {
           cursor: pointer;
         }
       }
-    }
-    .socials {
-      display: grid;
-      grid-template-rows: repeat(3, 1fr);
-      gap: 1.2rem;
-      align-self: start;
-      margin-top: 2rem;
       svg {
         .b {
           fill: $graylight;

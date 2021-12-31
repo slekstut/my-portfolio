@@ -1,1 +1,29 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160" height="240" viewBox="0 0 160 240"><defs><linearGradient id="a" x1="1" y1="-1.747" x2="0.666" y2="0.931" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#4000ff" stop-opacity="0.447"/><stop offset="1" stop-color="#92028e" stop-opacity="0.6"/></linearGradient></defs><g transform="translate(0)"><path d="M40,280a40.015,40.015,0,0,0,40-40V200H40a40,40,0,0,0,0,80Z" transform="translate(0 -40)" fill="url(#a)"/><path d="M0,140a40.015,40.015,0,0,1,40-40H80v80H40A40.015,40.015,0,0,1,0,140Z" transform="translate(0 -20)" fill="url(#a)"/><path d="M0,40A40.015,40.015,0,0,1,40,0H80V80H40A40.015,40.015,0,0,1,0,40Z" transform="translate(0)" fill="url(#a)"/><path d="M100,0h40a40,40,0,0,1,0,80H100Z" transform="translate(-20)" fill="url(#a)"/><path d="M180,140a40,40,0,1,1-40-40A40.015,40.015,0,0,1,180,140Z" transform="translate(-20 -20)" fill="url(#a)"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 0 160 240">
+    <defs>
+        <linearGradient id="a" x1="1" y1="-1.747" x2="0.666"
+            y2="0.931" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#4000ff"
+                stop-opacity="0.447" />
+            <stop offset="1" stop-color="#92028e"
+                stop-opacity="0.6" />
+        </linearGradient>
+    </defs>
+    <g transform="translate(0)">
+        <path
+            d="M40,280a40.015,40.015,0,0,0,40-40V200H40a40,40,0,0,0,0,80Z"
+            transform="translate(0 -40)" fill="url(#a)" />
+        <path
+            d="M0,140a40.015,40.015,0,0,1,40-40H80v80H40A40.015,40.015,0,0,1,0,140Z"
+            transform="translate(0 -20)" fill="url(#a)" />
+        <path
+            d="M0,40A40.015,40.015,0,0,1,40,0H80V80H40A40.015,40.015,0,0,1,0,40Z"
+            transform="translate(0)" fill="url(#a)" />
+        <path d="M100,0h40a40,40,0,0,1,0,80H100Z"
+            transform="translate(-20)" fill="url(#a)" />
+        <path
+            d="M180,140a40,40,0,1,1-40-40A40.015,40.015,0,0,1,180,140Z"
+            transform="translate(-20 -20)" fill="url(#a)" />
+    </g>
+</svg>

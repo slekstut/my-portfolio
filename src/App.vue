@@ -51,6 +51,7 @@ body {
   padding: 0;
   font-size: $fontSize;
   overflow-x: hidden;
+  background-color: $white;
 }
 
 #app {

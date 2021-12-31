@@ -13,7 +13,7 @@
           <button>download cv</button>
         </div>
         <div class="portfolio-image">
-          <img src="../assets/img/foto.png" alt="my-photo" />
+          <img src="../assets/img/myself2x.png" alt="my-photo" />
         </div>
       </div>
     </div>
@@ -26,7 +26,7 @@ export default {};
 
 <style lang="scss" scoped>
 .container {
-  margin-top: 25%;
+  margin-top: 8%;
   width: 100%;
   display: grid;
   place-items: center;
@@ -34,15 +34,17 @@ export default {};
     width: 80%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 8rem;
     h1 {
       font-size: 5rem;
+      color: $black;
       font-weight: 600;
       margin-bottom: 7.5rem;
       text-transform: capitalize;
     }
     p {
       font-size: 1.8rem;
+      color: $black;
       text-align: left;
       margin: 0;
       line-height: 2.8rem;
@@ -68,11 +70,12 @@ export default {};
       }
     }
     .portfolio-image {
-      justify-self: center;
-      align-self: center;
+      display: flex;
+      place-items: center;
       z-index: 1000;
       img {
-        width: 50%;
+        width: 100%;
+
       }
     }
   }

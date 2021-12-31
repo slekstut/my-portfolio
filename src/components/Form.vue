@@ -56,7 +56,6 @@ export default {
 <style lang="scss" scoped>
 form {
   width: 35%;
-  margin-top: 13rem;
   .floating-label {
     position: relative;
     margin-bottom: 1.3rem;

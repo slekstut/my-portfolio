@@ -12,6 +12,12 @@
           </div>
           <div class="contact-form">
             <Form></Form>
+            <p>
+              Or email me:
+              <a href="mailto:sarunas.lekstutis@gmail.com" target="_blank"
+                >sarunas.lekstutis@gmail.com</a
+              >
+            </p>
           </div>
         </div>
         <div class="contact-links">
@@ -163,7 +169,7 @@ export default {
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 2rem;
-    margin-top: 6.5rem;
+    margin-top: 8.5rem;
     margin-bottom: 6.5rem;
     h1 {
       color: $white;
@@ -178,17 +184,26 @@ export default {
       color: $white;
       width: 85%;
       margin-top: 3rem;
-      
     }
     .split {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 5rem;
-        .contact-form {
-          width: 100%;
-          margin: 6rem 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 5rem;
+      .contact-form {
+        width: 100%;
+        margin: 6rem 0;
+        p {
+          font-size: 1.2rem;
+          text-align: left;
+          color: $white;
+          a {
+            font-size: 1.2rem;
+            color: $white;
+            text-decoration: underline;
+          }
         }
       }
+    }
   }
 
   .contact-links {

@@ -21,7 +21,7 @@
             <p>SASS</p>
           </div>
           <div>
-            <img src="../assets/icons/Icon-awesome-js.svg" alt="js" />
+            <img src="../assets/icons/js-icon.png" alt="js" />
             <p>javascript</p>
           </div>
           <div>
@@ -33,7 +33,7 @@
             <p>node js</p>
           </div>
           <div>
-            <img src="../assets/icons/adobe-xd.svg" alt="adobe-xd" />
+            <img src="../assets/icons/adobexd.png" alt="adobe-xd" />
             <p>adobe xd</p>
           </div>
           <div>
@@ -59,7 +59,7 @@ export default {};
 
 <style lang="scss" scoped>
 .container {
-  margin-top: 20%;
+  margin-top: 10rem;
   width: 100%;
   display: grid;
   place-items: center;
@@ -70,6 +70,7 @@ export default {};
       color: $black;
       font-size: 5rem;
       font-weight: 600;
+      margin: 0;
       margin-bottom: 7.5rem;
       text-transform: capitalize;
     }
@@ -81,9 +82,12 @@ export default {};
       justify-items: center;
       align-items: center;
       div {
+      display: grid;
         img {
-            width: 100%;
-            margin: 0 auto;
+            max-width: 3rem;
+            height: 100%;
+            align-self: center;
+            justify-self: center;
         }
         p {
             font-size: 2rem;

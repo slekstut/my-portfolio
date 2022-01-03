@@ -151,12 +151,12 @@ export default {};
       grid-column-end: 4;
       justify-self: end;
       h1 {
-        color: $white;
+        color: $darkblue;
         font-size: 5rem;
         margin: 0;
       }
       h3 {
-        color: $white;
+        color: $darkblue;
         font-size: 2rem;
         position: relative;
         font-weight: 400;

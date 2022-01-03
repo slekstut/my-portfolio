@@ -107,7 +107,7 @@ form {
   .floating-textarea {
     font-family: $font;
     overflow: scroll;
-    min-height: 5rem;
+    min-height: 8rem;
     max-height: 20rem;
     overflow: hidden;
     overflow-x: hidden;
@@ -133,11 +133,12 @@ form {
     align-items: center;
     justify-content: center;  
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
     background: transparent;
     font-size: 1.3rem;
     text-transform: uppercase;
     border: 2px solid $white;
+    border-radius: 1.2rem;
     padding: 1rem 1.5rem;
     color: $white;
     font-weight: 700;

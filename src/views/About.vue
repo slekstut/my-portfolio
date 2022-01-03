@@ -13,7 +13,7 @@
           <button>download cv</button>
         </div>
         <div class="portfolio-image">
-          <img src="../assets/img/myself2x.png" alt="my-photo" />
+          <img src="../assets/img/my-portfolio-img-edited.png" alt="my-photo" />
         </div>
       </div>
     </div>
@@ -39,6 +39,8 @@ export default {};
       font-size: 5rem;
       color: $black;
       font-weight: 600;
+      line-height: .8;
+      margin: 0;
       margin-bottom: 7.5rem;
       text-transform: capitalize;
     }
@@ -58,12 +60,14 @@ export default {};
       text-transform: uppercase;
       letter-spacing: 0.25rem;
       border: 1px solid transparent;
+      border-radius: 1.2rem;
       font-weight: 400;
       width: 100%;
       &:hover {
         color: $darkblue;
         background-color: $white;
         border: 1px solid $darkblue;
+        border-radius: 1.2rem;
         font-weight: 400;
         cursor: pointer;
         transition: all 0.5s ease-out;
@@ -75,7 +79,6 @@ export default {};
       z-index: 1000;
       img {
         width: 100%;
-
       }
     }
   }

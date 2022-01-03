@@ -75,7 +75,7 @@ export default {};
       place-items: center;
       font-size: 1.3rem;
       text-transform: capitalize;
-      color: $white;
+      color: $darkblue;
       letter-spacing: 0.1rem;
     }
     ul {

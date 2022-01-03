@@ -160,7 +160,7 @@ export default {};
           fill: $black;
         }
         h5 {
-          font-size: 3rem;
+          font-size: 2.5rem;
           color: $black;
           font-weight: 600;
           text-transform: capitalize;

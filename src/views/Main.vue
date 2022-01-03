@@ -154,6 +154,7 @@ export default {};
         color: $darkblue;
         font-size: 5rem;
         margin: 0;
+        text-align: center;
       }
       h3 {
         color: $darkblue;
@@ -168,6 +169,7 @@ export default {};
           width: 44%;
           background: $purple;
         }
+        
       }
       h3:after {
         content: "";

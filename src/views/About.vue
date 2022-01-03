@@ -5,10 +5,14 @@
         <div>
           <h1>about me</h1>
           <p>
-            Self-taught front end web developer seeking full-time developer role
-            at starting position or part time job. Expierence in my personal
-            projects and current role in project management area will bring the
-            most value and satisfaction to my employer and the end user.
+            I am from Lithuania. I started programming Pascal since school.
+            Later I graduated with a bachelor's degree in computer engineering
+            from Klaipeda University. After studying, I didn’t know what I
+            wanted to do in my life, so fate ensued and I fell into a non-IT job
+            where I still work. But after a few years, I realized I wanted to
+            work as a website developer. Since then, I have been actively
+            learning, programming and pursuing career change. I love programming
+            and website design and everything related to it.
           </p>
           <button>download cv</button>
         </div>
@@ -39,7 +43,7 @@ export default {};
       font-size: 5rem;
       color: $black;
       font-weight: 600;
-      line-height: .8;
+      line-height: 0.8;
       margin: 0;
       margin-bottom: 7.5rem;
       text-transform: capitalize;

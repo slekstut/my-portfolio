@@ -12,7 +12,11 @@
         <div class="contact">
           <button>contact me</button>
         </div>
-        <div class="hamburger" @click="activeNavbar = !activeNavbar">
+        <div
+          class="hamburger"
+          v-if="!activeNavbar"
+          @click="activeNavbar = true"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="26"
@@ -45,6 +49,19 @@
                 stroke-width="2"
               />
             </g>
+          </svg>
+        </div>
+        <div class="close-btn" v-else @click="activeNavbar = false">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="21"
+            height="21"
+            viewBox="0 0 21 21"
+          >
+            <path
+              d="M28.5,9.615,26.385,7.5,18,15.885,9.615,7.5,7.5,9.615,15.885,18,7.5,26.385,9.615,28.5,18,20.115,26.385,28.5,28.5,26.385,20.115,18Z"
+              transform="translate(-7.5 -7.5)"
+            />
           </svg>
         </div>
       </div>
@@ -103,6 +120,7 @@ export default {
         }
       }
     }
+
     .contact {
       display: grid;
       place-items: center;
@@ -153,15 +171,19 @@ export default {
 
 @media only screen and (max-width: 48rem) {
   .container {
+    position: relative;
     .wrapper {
-      position: relative;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      .logo {
+        display: none;
+      }
       .nav {
         display: none;
-        
         li {
           font-size: 0.8rem;
         }
-        
       }
       .contact {
         button {
@@ -170,18 +192,10 @@ export default {
           visibility: hidden;
         }
       }
-      .mobile-menu {
-          display: flex;
-          flex-direction: column;
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 250px;
-          background: red;
-          transition: margin 0.2s ease-out;
-          border: 1px solid #cccccc;
-        }
       .hamburger {
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
         display: block;
         float: right;
         padding: 0.4rem;
@@ -189,6 +203,44 @@ export default {
         &:hover {
           cursor: pointer;
         }
+      }
+      .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        width: 30%;
+        height: 100vh;
+        background: red;
+        transition: 0.2s ease-out;
+        z-index: 3000;
+        li {
+          margin-top: 2rem;
+          margin-right: 1rem;
+        }
+        li:nth-child(1) {
+          margin-top: 8rem;
+        }
+      }
+      .close-btn {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        width: 2rem;
+        height: 100%;
+        z-index: 4000;
+        &:hover svg path {
+          cursor: pointer;
+          fill: $purple;
+          transition: all 0.5s ease-out;
+        }
+      }
+      .close-btn svg path {
+        fill: $white;
       }
     }
   }

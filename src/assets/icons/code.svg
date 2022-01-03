@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="288.042"
+    height="227.64" viewBox="0 0 288.042 227.64">
+    <g transform="translate(112.521 -5285.68)">
+        <g transform="translate(-17)">
+            <line x1="85" y2="85"
+                transform="translate(-83.5 5314.5)"
+                fill="none" stroke="#707070"
+                stroke-linecap="round" stroke-width="17" />
+            <line x1="85" y2="85"
+                transform="translate(1.5 5399.5) rotate(90)"
+                fill="none" stroke="#707070"
+                stroke-linecap="round" stroke-width="17" />
+        </g>
+        <g transform="translate(78.5 5314.5)">
+            <line x2="85" y2="85" fill="none"
+                stroke="#707070" stroke-linecap="round"
+                stroke-width="17" />
+            <line x1="85" y1="85"
+                transform="translate(85 85) rotate(90)"
+                fill="none" stroke="#707070"
+                stroke-linecap="round" stroke-width="17" />
+        </g>
+        <line x1="93" y2="205"
+            transform="matrix(0.985, -0.174, 0.174, 0.985, -33.592, 5306.632)"
+            fill="none" stroke="#707070"
+            stroke-width="17" />
+    </g>
+</svg>

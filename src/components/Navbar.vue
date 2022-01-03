@@ -3,7 +3,7 @@
     <div class="container">
       <div class="wrapper">
         <div class="logo">Sarunas Lekstutis</div>
-        <ul>
+        <ul class="nav" :class="{ 'mobile-menu': activeNavbar }">
           <li>home</li>
           <li>services</li>
           <li>projects</li>
@@ -12,7 +12,7 @@
         <div class="contact">
           <button>contact me</button>
         </div>
-        <div class="hamburger">
+        <div class="hamburger" @click="activeNavbar = !activeNavbar">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="26"
@@ -53,7 +53,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "Navbar",
+  data() {
+    return {
+      activeNavbar: true,
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -68,6 +75,7 @@ export default {};
   .wrapper {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 80%;
     padding-top: 3.3rem;
     .logo {
@@ -78,7 +86,7 @@ export default {};
       color: $darkblue;
       letter-spacing: 0.1rem;
     }
-    ul {
+    .nav {
       display: flex;
       list-style: none;
       li {
@@ -111,6 +119,7 @@ export default {};
         letter-spacing: 0.1rem;
         text-transform: capitalize;
         transition-duration: 0.3s;
+        white-space: nowrap;
         &:hover {
           background-color: $white;
           color: $purple;
@@ -120,6 +129,67 @@ export default {};
     }
     .hamburger {
       display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 80rem) {
+  .container {
+    .wrapper {
+      .nav {
+        li {
+          font-size: 0.8rem;
+        }
+      }
+      .contact {
+        button {
+          font-size: 0.8rem;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 48rem) {
+  .container {
+    .wrapper {
+      position: relative;
+      .nav {
+        display: none;
+        
+        li {
+          font-size: 0.8rem;
+        }
+        
+      }
+      .contact {
+        button {
+          display: none;
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+      .mobile-menu {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 250px;
+          background: red;
+          transition: margin 0.2s ease-out;
+          border: 1px solid #cccccc;
+        }
+      .hamburger {
+        display: block;
+        float: right;
+        padding: 0.4rem;
+        margin: 0;
+        &:hover {
+          cursor: pointer;
+        }
+      }
     }
   }
 }

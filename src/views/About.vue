@@ -19,6 +19,7 @@
         <div class="portfolio-image">
           <img src="../assets/img/my-portfolio-img-edited.png" alt="my-photo" />
         </div>
+        <div class="about-bg"></div>
       </div>
     </div>
   </div>
@@ -34,6 +35,7 @@ export default {};
   width: 100%;
   display: grid;
   place-items: center;
+    position: relative;
   .wrapper {
     width: 80%;
     display: grid;
@@ -67,6 +69,9 @@ export default {};
       border-radius: 1.2rem;
       font-weight: 400;
       width: 100%;
+      box-shadow: 14px 14px 44px -1px rgba(59, 68, 75, 0.29);
+      -webkit-box-shadow: 14px 14px 44px -1px rgba(59, 68, 75, 0.29);
+      -moz-box-shadow: 14px 14px 44px -1px rgba(59, 68, 75, 0.29);
       &:hover {
         color: $darkblue;
         background-color: $white;
@@ -85,6 +90,18 @@ export default {};
         width: 100%;
       }
     }
+    
   }
+  .about-bg {
+      position: absolute;
+      background-image: url("../assets/img/About.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 40rem;
+      top: -15rem;
+      right: -10rem;
+      z-index: 3000;
+    }
 }
 </style>

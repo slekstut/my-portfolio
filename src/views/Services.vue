@@ -156,6 +156,7 @@ export default {};
         border: 1px $graylight solid;
         border-radius: 1rem;
         padding: 2.3rem 3.7rem;
+        
         svg {
           fill: $black;
         }
@@ -175,6 +176,7 @@ export default {};
         &:hover {
           border: 1px solid $darkblue;
           transition-duration: 0.3s;
+          
         }
       }
     }

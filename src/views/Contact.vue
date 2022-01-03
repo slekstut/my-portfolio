@@ -229,6 +229,7 @@ export default {
         }
       }
       svg {
+      padding: .2rem;
         .b {
           fill: $graylight;
         }

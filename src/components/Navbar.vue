@@ -177,7 +177,9 @@ export default {
       margin: 0;
       padding: 0;
       .logo {
-        display: none;
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
       }
       .nav {
         display: none;
@@ -213,11 +215,12 @@ export default {
         right: 0;
         margin: 0;
         padding: 0;
-        width: 30%;
+        width: 100%;
         height: 100vh;
-        background: red;
+        background: $darkblue;
         transition: 0.2s ease-out;
         z-index: 3000;
+        overflow-y: hidden;
         li {
           margin-top: 2rem;
           margin-right: 1rem;

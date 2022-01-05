@@ -149,14 +149,21 @@ export default {};
     .text {
       grid-column-start: 1;
       grid-column-end: 4;
-      justify-self: end;
+      display: grid;
+      justify-content: end;
+      grid-template-rows: auto 1fr 1fr;
       h1 {
+      align-self: end;
+        justify-self: start;
         color: $darkblue;
         font-size: 5rem;
         margin: 0;
         text-align: center;
       }
       h3 {
+        display: inline-block;
+        align-self: start;
+        justify-self: start;
         color: $darkblue;
         font-size: 2rem;
         position: relative;
@@ -166,10 +173,9 @@ export default {};
         text-align: center;
         letter-spacing: 0.1rem;
         &:hover::after {
-          width: 44%;
+          width: 100%;
           background: $purple;
         }
-        
       }
       h3:after {
         content: "";
@@ -178,7 +184,7 @@ export default {};
         height: 3px;
         bottom: -3px;
         margin: 0;
-        left: 28%;
+        left: 0;
         right: 0;
         width: 12%;
         border-radius: 5px;
@@ -198,6 +204,50 @@ export default {};
         &:hover .a {
           transition: all 1s ease-out;
           fill: $purple;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 80rem) {
+  .container {
+    .wrapper {
+      .text {
+        h1 {
+          font-size: 3rem;
+        }
+        h3 {
+          font-size: 1.5rem;
+          &:hover::after {
+            width: 15rem;
+          }
+        }
+        h3:after {
+          left: 22%;
+          width: 4rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 43.75rem) {
+  .container {
+    .wrapper {
+      .text {
+        h1 {
+          font-size: 3rem;
+        }
+        h3 {
+          font-size: 1.5rem;
+          &:hover::after {
+            width: 15rem;
+          }
+        }
+        h3:after {
+          left: 0;
+          width: 4rem;
         }
       }
     }

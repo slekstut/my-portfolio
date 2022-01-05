@@ -406,7 +406,7 @@ export default {};
       }
       .projects {
         grid-template-columns: minmax(5rem, 15rem) repeat(5, 1fr);
-        grid-auto-rows: minmax(4rem, 20rem);
+        grid-auto-rows: minmax(7rem, 20rem);
         .img-box {
           .text-box {
             .text {
@@ -425,27 +425,88 @@ export default {};
   }
 }
 
-@media only screen and (max-width: 80rem) {
+@media only screen and (max-width: 64rem) {
   .container {
     .wrapper {
-      h4 {
-        font-size: 1rem;
-      }
-      h1 {
-        font-size: 3rem;
-      }
       .projects {
         grid-template-columns: minmax(5rem, 15rem) repeat(5, 1fr);
-        grid-auto-rows: minmax(4rem, 20rem);
+        grid-auto-rows: minmax(4rem, 12rem);
+        gap: 1rem;
         .img-box {
           .text-box {
             .text {
               gap: 0.3rem;
               p {
-                font-size: 2rem;
+                font-size: 1.6rem;
               }
               a svg {
-                width: 70%;
+                width: 60%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 48rem) {
+  .container {
+    .wrapper {
+      .projects {
+        grid-template-columns: minmax(5rem, 15rem) repeat(3, 1fr);
+        grid-auto-rows: minmax(4rem, 12rem);
+        gap: 2rem;
+        .img-box {
+          .text-box {
+            .text {
+              gap: 0.3rem;
+              p {
+                font-size: 1rem;
+              }
+              a svg {
+                width: 40%;
+              }
+            }
+          }
+        }
+        .img-box:nth-child(1) {
+          grid-row: 1 / 3;
+          grid-column: 1 / 2;
+        }
+        .img-box:nth-child(3) {
+          grid-row: 1 / 2;
+          grid-column: 2 / 5;
+        }
+        .img-box:nth-child(2) {
+          grid-row: 2 / 3;
+          grid-column: 2 / 5;
+        }
+        .img-box:nth-child(4) {
+          grid-row: 3 / 4;
+          grid-column: 1 / 3;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 32.5rem) {
+  .container {
+    .wrapper {
+      .projects {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+        gap: 1rem;
+        .img-box {
+          .text-box {
+            .text {
+              gap: 0.3rem;
+              p {
+                font-size: 1rem;
+              }
+              a svg {
+                width: 40%;
               }
             }
           }

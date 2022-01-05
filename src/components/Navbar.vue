@@ -8,6 +8,7 @@
           <li>services</li>
           <li>projects</li>
           <li>about</li>
+          <li class="only-mobile">contact me</li>
         </ul>
         <div class="contact">
           <button>contact me</button>
@@ -51,7 +52,7 @@
             </g>
           </svg>
         </div>
-        <div class="close-btn" v-else @click="activeNavbar = false">
+        <div class="close-btn" v-if="activeNavbar" @click="activeNavbar = false">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="21"
@@ -74,7 +75,7 @@ export default {
   name: "Navbar",
   data() {
     return {
-      activeNavbar: true,
+      activeNavbar: false,
     };
   },
 };
@@ -119,13 +120,15 @@ export default {
           cursor: pointer;
         }
       }
+      .only-mobile {
+      display: none;
+      }
     }
 
     .contact {
       display: grid;
       place-items: center;
       button {
-        height: 100%;
         background: $darkblue;
         font-size: 1.3rem;
         border: 1px solid transparent;
@@ -144,6 +147,9 @@ export default {
           cursor: pointer;
         }
       }
+    }
+    .close-btn {
+      display: none;
     }
     .hamburger {
       display: none;
@@ -171,13 +177,14 @@ export default {
 
 @media only screen and (max-width: 48rem) {
   .container {
-    position: relative;
     .wrapper {
       width: 100%;
       margin: 0;
       padding: 0;
+    position: relative;
       .logo {
         position: absolute;
+        font-size: 1rem;
         top: 2rem;
         left: 2rem;
       }
@@ -185,6 +192,9 @@ export default {
         display: none;
         li {
           font-size: 0.8rem;
+        }
+        .only-mobile {
+        display: block;
         }
       }
       .contact {
@@ -231,6 +241,7 @@ export default {
       }
       .close-btn {
         position: absolute;
+        display: block;
         top: 2rem;
         right: 2rem;
         width: 2rem;
@@ -246,6 +257,9 @@ export default {
         fill: $white;
       }
     }
+    
   }
 }
+
+
 </style>

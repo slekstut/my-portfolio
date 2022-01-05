@@ -5,6 +5,7 @@
         <div class="text">
           <h1>Hello this is Sarunas</h1>
           <h3>front end developer</h3>
+          <button class="call-action">check my projects</button>
         </div>
         <div class="socials">
           <svg
@@ -131,7 +132,7 @@ export default {};
 
 <style lang="scss" scoped>
 .container {
-  height: 64rem;
+  height: 100vh;
   width: 100%;
   padding-top: 3%;
   top: 0;
@@ -159,6 +160,7 @@ export default {};
         font-size: 5rem;
         margin: 0;
         text-align: center;
+        line-height: 1;
       }
       h3 {
         display: inline-block;
@@ -190,6 +192,9 @@ export default {};
         border-radius: 5px;
         transition: all 0.5s ease-out;
       }
+      .call-action {
+        display: none;
+      }
     }
     .socials {
       justify-self: end;
@@ -219,13 +224,10 @@ export default {};
         }
         h3 {
           font-size: 1.5rem;
-          &:hover::after {
-            width: 15rem;
-          }
+          text-align: center;
         }
         h3:after {
-          left: 22%;
-          width: 4rem;
+          width: 2rem;
         }
       }
     }
@@ -240,16 +242,66 @@ export default {};
           font-size: 3rem;
         }
         h3 {
-          font-size: 1.5rem;
-          &:hover::after {
-            width: 15rem;
-          }
-        }
-        h3:after {
-          left: 0;
-          width: 4rem;
+          justify-self: center;
         }
       }
+      .socials {
+      gap: .5rem;
+      svg {
+        width: 2rem;
+        height: 100%;
+      }
+    }
+    }
+  }
+}
+
+@media only screen and (max-width: 48rem) {
+   .container {
+    .wrapper {
+      .text {
+        h1 {
+          font-size: 3rem;
+        }
+        h3 {
+          font-size: 1rem;
+          justify-self: center;
+        
+        }
+        h3:after {
+        height: 1px;
+      }
+      .call-action {
+        display: inline-block;
+          justify-self: center;
+        width: fit-content;
+        margin-top: 2rem;
+        background: $darkblue;
+        font-size: .8rem;
+        border: 1px solid transparent;
+        border-radius: 25px;
+        text-transform: uppercase;
+        padding: 0.8rem 1.2rem;
+        color: $white;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        text-transform: capitalize;
+        transition-duration: 0.3s;
+        white-space: nowrap;
+        &:hover {
+          background-color: $white;
+          color: $purple;
+          cursor: pointer;
+        }
+      }
+      }
+      .socials {
+      gap: .5rem;
+      svg {
+        width: 2rem;
+        height: 100%;
+      }
+    }
     }
   }
 }

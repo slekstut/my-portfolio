@@ -296,6 +296,27 @@ export default {};
       .services {
         grid-template-columns: 1fr;
         .box {
+          width: 60%;
+          padding: 2rem;
+          p {
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 48rem) {
+   .container {
+    .wrapper {
+      .services {
+        .box {
+          width: 80%;
+          padding: 1rem;
+          p {
+            width: 80%;
+          }
         }
       }
     }

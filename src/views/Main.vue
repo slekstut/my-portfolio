@@ -137,7 +137,7 @@ export default {};
   padding-top: 3%;
   top: 0;
   position: relative;
-  background-image: url("../assets/img/background-image.png");
+  background-image: url("../assets/img/bg-img.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

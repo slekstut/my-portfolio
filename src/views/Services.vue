@@ -117,7 +117,7 @@ export default {};
       position: relative;
       &:before {
         content: "";
-        width: 0.17rem;
+        width: 0.15rem;
         height: 5.5rem;
         position: absolute;
         background: $black;
@@ -141,14 +141,14 @@ export default {};
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 3rem;
-      margin-bottom: 13rem;
+      margin-bottom: 7.5rem;
       .box {
         margin: 0 auto;
         display: grid;
         place-items: center;
         border: 1px $graylight solid;
         border-radius: 1rem;
-        padding: 2.3rem 3.7rem;
+        padding: 2.3rem 2rem;
         svg {
           fill: $black;
           width: 4rem;
@@ -162,7 +162,7 @@ export default {};
           color: $black;
           font-weight: 600;
           text-transform: capitalize;
-          margin: 1.5rem 0;
+          margin: 1rem 0;
           text-align: center;
         }
         p {
@@ -170,6 +170,7 @@ export default {};
           color: $black;
           text-align: center;
           margin: 0;
+          align-self: start;
         }
         &:hover {
           border: 1px solid $darkblue;
@@ -189,8 +190,6 @@ export default {};
           }
           p {
             font-size: 1.5rem;
-          }
-          svg {
           }
         }
       }
@@ -230,6 +229,7 @@ export default {};
       }
       .services {
         .box {
+          padding: 1.6rem 1.8rem;
           h5 {
             font-size: 1rem;
           }
@@ -240,6 +240,62 @@ export default {};
             width: 1.8rem;
             height: 100%;
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 48rem) {
+  .container {
+    margin-top: 8rem;
+    .wrapper {
+      h4 {
+        font-size: 1rem;
+        margin: 1rem 0;
+        &:before {
+          width: 0.12rem;
+          height: 3.5rem;
+          bottom: 3rem;
+        }
+      }
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 4rem;
+        margin-top: 1rem;
+      }
+      .services {
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+
+        .box {
+          padding: 1.2rem 1.3rem;
+          svg {
+            width: 2rem;
+          }
+          h5 {
+            font-size: 1rem;
+            margin: 0.5rem 0;
+          }
+          p {
+            font-size: 0.75rem;
+          }
+          svg {
+            width: 1.8rem;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 48rem) {
+  .container {
+    .wrapper {
+      .services {
+        grid-template-columns: 1fr;
+        .box {
         }
       }
     }

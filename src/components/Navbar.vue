@@ -1,20 +1,20 @@
 <template>
   <div>
     <div class="container">
-      <div class="wrapper">
+      <div class="navigation">
         <div class="logo">Sarunas Lekstutis</div>
-        <ul class="nav" :class="{ 'mobile-menu': activeNavbar }">
+        <ul class="navigation__links" :class="{ nav__menu: activeNavbar }">
           <li>home</li>
           <li>services</li>
           <li>projects</li>
           <li>about</li>
-          <li class="only-mobile">contact me</li>
+          <li class="navigation__links-action">contact me</li>
         </ul>
-        <div class="contact">
+        <div class="navigation__button">
           <button>contact me</button>
         </div>
         <div
-          class="hamburger"
+          class="navigation__menu"
           v-if="!activeNavbar"
           @click="activeNavbar = true"
         >
@@ -52,7 +52,11 @@
             </g>
           </svg>
         </div>
-        <div class="close-btn" v-if="activeNavbar" @click="activeNavbar = false">
+        <div
+          class="close-btn"
+          v-if="activeNavbar"
+          @click="activeNavbar = false"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="21"
@@ -90,7 +94,7 @@ export default {
   display: grid;
   place-items: center;
   position: absolute;
-  .wrapper {
+  .navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -104,7 +108,7 @@ export default {
       color: $darkblue;
       letter-spacing: 0.1rem;
     }
-    .nav {
+    .navigation__links {
       display: flex;
       list-style: none;
       li {
@@ -120,12 +124,11 @@ export default {
           cursor: pointer;
         }
       }
-      .only-mobile {
-      display: none;
+      .navigation__links-action {
+        display: none;
       }
     }
-
-    .contact {
+    .navigation__button {
       display: grid;
       place-items: center;
       button {
@@ -151,7 +154,7 @@ export default {
     .close-btn {
       display: none;
     }
-    .hamburger {
+    .navigation__menu {
       display: none;
     }
   }
@@ -159,13 +162,13 @@ export default {
 
 @media only screen and (max-width: 80rem) {
   .container {
-    .wrapper {
-      .nav {
+    .navigation {
+      .navigation__links {
         li {
           font-size: 0.8rem;
         }
       }
-      .contact {
+      .navigation__button {
         button {
           font-size: 0.8rem;
           text-transform: uppercase;
@@ -177,27 +180,27 @@ export default {
 
 @media only screen and (max-width: 48rem) {
   .container {
-    .wrapper {
+    .navigation {
       width: 100%;
       margin: 0;
       padding: 0;
-    position: relative;
+      position: relative;
       .logo {
         position: absolute;
         font-size: 1rem;
         top: 2rem;
         left: 2rem;
       }
-      .nav {
+      .navigation__links {
         display: none;
         li {
           font-size: 0.8rem;
         }
-        .only-mobile {
-        display: block;
+        .navigation__links-action {
+          display: block;
         }
       }
-      .contact {
+      .navigation__button {
         button {
           display: none;
           opacity: 0;
@@ -216,7 +219,7 @@ export default {
           cursor: pointer;
         }
       }
-      .mobile-menu {
+      .nav__menu {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
@@ -257,9 +260,6 @@ export default {
         fill: $white;
       }
     }
-    
   }
 }
-
-
 </style>

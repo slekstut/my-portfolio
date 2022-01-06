@@ -3,7 +3,7 @@
     <div class="container">
       <div class="wrapper">
         <h1>Skills</h1>
-        <div class="skill-icon">
+        <div class="skills">
           <div>
             <img src="../assets/icons/Icon-ionic-logo-html5.svg" alt="html5" />
             <p>HTML</p>
@@ -75,7 +75,7 @@ export default {};
       margin-bottom: 7.5rem;
       text-transform: capitalize;
     }
-    .skill-icon {
+    .skills {
       width: 80%;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -109,7 +109,7 @@ export default {};
 @media only screen and (max-width: 80rem) {
   .container {
     .wrapper {
-    .skill-icon {
+    .skills {
       width: 100%;
       grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     }
@@ -124,7 +124,7 @@ export default {};
 @media only screen and (max-width: 48rem) {
 .container {
     .wrapper {
-    .skill-icon {
+    .skills {
       grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     }
       .grid {

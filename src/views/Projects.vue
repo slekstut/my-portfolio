@@ -5,16 +5,16 @@
         <h4>Portfolios</h4>
         <h1>some of my latest projects</h1>
         <div class="projects">
-          <div class="img-box">
+          <div class="box">
             <img
               src="../assets/img/project-5.jpg"
               alt="project-1"
-              class="image"
+              class="box__image"
             />
-            <div class="text-box">
-              <div class="text">
+            <div class="box__content">
+              <div class="box__title">
                 <p>Project #1</p>
-                <div class="icons">
+                <div class="box__icons">
                   <a href="#"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -69,16 +69,16 @@
               </div>
             </div>
           </div>
-          <div class="img-box">
+          <div class="box">
             <img
               src="../assets/img/project-2.png"
               alt="project-2"
-              class="image"
+              class="box__image"
             />
-            <div class="text-box">
-              <div class="text">
+            <div class="box__content">
+              <div class="box__title">
                 <p>Project #3</p>
-                <div class="icons">
+                <div class="box__icons">
                   <a href="#"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -133,16 +133,16 @@
               </div>
             </div>
           </div>
-          <div class="img-box">
+          <div class="box">
             <img
               src="../assets/img/project-1.png"
               alt="project-1"
-              class="image"
+              class="box__image"
             />
-            <div class="text-box">
-              <div class="text">
+            <div class="box__content">
+              <div class="box__title">
                 <p>Project #2</p>
-                <div class="icons">
+                <div class="box__icons">
                   <a href="#"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -197,16 +197,16 @@
               </div>
             </div>
           </div>
-          <div class="img-box">
+          <div class="box">
             <img
               src="../assets/img/project-4.png"
               alt="project-2"
-              class="image"
+              class="box__image"
             />
-            <div class="text-box">
-              <div class="text">
+            <div class="box__content">
+              <div class="box__title">
                 <p>Project #4</p>
-                <div class="icons">
+                <div class="box__icons">
                   <a href="#"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -280,7 +280,7 @@ export default {};
   position: relative;
   .wrapper {
     width: 80%;
-    text-align: center;
+    box__title-align: center;
     display: grid;
     place-items: center;
     h4 {
@@ -289,14 +289,14 @@ export default {};
       margin-top: 10rem;
       font-weight: 200;
       letter-spacing: 0.2rem;
-      text-transform: uppercase;
+      box__title-transform: uppercase;
     }
     h1 {
       color: $white;
       font-size: 5rem;
       font-weight: 600;
       margin: 0;
-      text-transform: uppercase;
+      box__title-transform: uppercase;
     }
     .projects {
       display: grid;
@@ -307,35 +307,38 @@ export default {};
       align-items: center;
       width: 100%;
       margin: 10rem 0 13rem 0;
-      .img-box {
+      .box {
         position: relative;
         height: 100%;
-        .image {
+        .box__image {
           opacity: 1;
           display: block;
+          max-width: 100%;
           width: 100%;
           height: 100%;
+          aspect-ratio: 1 / 1;
+          object-fit: cover;
           transition: 0.5s ease;
           backface-visibility: hidden;
           justify-self: center;
         }
-        &:hover .image {
+        &:hover .box__image {
           opacity: 0.5;
         }
-        &:hover .text-box {
+        &:hover .box__content {
           opacity: 1;
         }
-        .text-box {
+        .box__content {
           position: absolute;
           opacity: 0;
           top: 50%;
           left: 50%;
           width: 80%;
-          text-align: center;
+          box__title-align: center;
           transition: 0.5s ease;
           transform: translate(-50%, -50%);
           -ms-transform: translate(-50%, -50%);
-          .text {
+          .box__title {
             background-color: transparent;
             font-size: 1rem;
             display: grid;
@@ -350,7 +353,7 @@ export default {};
               margin-bottom: 1rem;
               grid-column: span 2;
             }
-            .icons {
+            .box__icons {
               display: grid;
               grid-template-columns: 1fr 1fr;
               justify-content: center;
@@ -376,18 +379,18 @@ export default {};
           }
         }
       }
-      .img-box:nth-child(1) {
+      .box:nth-child(1) {
         grid-row: 1 / 3;
         grid-column: 1 / 3;
       }
-      .img-box:nth-child(2) {
+      .box:nth-child(2) {
         grid-row: 1 / 2;
         grid-column: 5 / 7;
       }
-      .img-box:nth-child(3) {
+      .box:nth-child(3) {
         grid-column: 3 / 5;
       }
-      .img-box:nth-child(4) {
+      .box:nth-child(4) {
         grid-row: 2 / 3;
         grid-column: 3 / 7;
       }
@@ -407,9 +410,9 @@ export default {};
       .projects {
         grid-template-columns: minmax(5rem, 15rem) repeat(5, 1fr);
         grid-auto-rows: minmax(7rem, 20rem);
-        .img-box {
-          .text-box {
-            .text {
+        .box {
+          .box__content {
+            .box__title {
               gap: 0.3rem;
               p {
                 font-size: 2rem;
@@ -432,9 +435,9 @@ export default {};
         grid-template-columns: minmax(5rem, 15rem) repeat(5, 1fr);
         grid-auto-rows: minmax(4rem, 12rem);
         gap: 1rem;
-        .img-box {
-          .text-box {
-            .text {
+        .box {
+          .box__content {
+            .box__title {
               gap: 0.3rem;
               p {
                 font-size: 1.6rem;
@@ -457,9 +460,9 @@ export default {};
         grid-template-columns: minmax(5rem, 15rem) repeat(3, 1fr);
         grid-auto-rows: minmax(4rem, 12rem);
         gap: 2rem;
-        .img-box {
-          .text-box {
-            .text {
+        .box {
+          .box__content {
+            .box__title {
               gap: 0.3rem;
               p {
                 font-size: 1rem;
@@ -470,19 +473,19 @@ export default {};
             }
           }
         }
-        .img-box:nth-child(1) {
+        .box:nth-child(1) {
           grid-row: 1 / 3;
           grid-column: 1 / 2;
         }
-        .img-box:nth-child(3) {
+        .box:nth-child(3) {
           grid-row: 1 / 2;
           grid-column: 2 / 5;
         }
-        .img-box:nth-child(2) {
+        .box:nth-child(2) {
           grid-row: 2 / 3;
           grid-column: 2 / 5;
         }
-        .img-box:nth-child(4) {
+        .box:nth-child(4) {
           grid-row: 3 / 4;
           grid-column: 1 / 3;
         }
@@ -496,11 +499,12 @@ export default {};
     .wrapper {
       .projects {
         grid-template-columns: 1fr;
-        grid-auto-rows: auto;
-        gap: 1rem;
-        .img-box {
-          .text-box {
-            .text {
+        grid-auto-rows: minmax(4rem, 20rem);
+        grid-auto-columns: minmax(2rem, 3rem);
+        gap: 1rem 0;
+        .box {
+          .box__content {
+            .box__title {
               gap: 0.3rem;
               p {
                 font-size: 1rem;
@@ -510,6 +514,22 @@ export default {};
               }
             }
           }
+        }
+        .box:nth-child(1) {
+          grid-row: 1 / 2;
+          grid-column: 1 / 1;
+        }
+        .box:nth-child(3) {
+          grid-row: 2 / 3;
+          grid-column: 1 / 1;
+        }
+        .box:nth-child(2) {
+          grid-row: 3 / 4;
+          grid-column: 1 / 1;
+        }
+        .box:nth-child(4) {
+          grid-row: 4 / 5;
+          grid-column: 1 / 1;
         }
       }
     }

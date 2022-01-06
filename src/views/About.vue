@@ -31,7 +31,7 @@ export default {};
 
 <style lang="scss" scoped>
 .container {
-  margin-top: 8%;
+  margin-top: 15rem;
   width: 100%;
   display: grid;
   place-items: center;

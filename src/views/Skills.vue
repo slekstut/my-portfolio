@@ -60,6 +60,7 @@ export default {};
 <style lang="scss" scoped>
 .container {
   margin-top: 10rem;
+  margin-bottom: 5rem;
   width: 100%;
   display: grid;
   place-items: center;
@@ -77,30 +78,58 @@ export default {};
     .skill-icon {
       width: 80%;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      gap: 1rem;
       justify-items: center;
       align-items: center;
       div {
-      display: grid;
+        display: grid;
         img {
-            max-width: 3rem;
-            height: 100%;
-            align-self: center;
-            justify-self: center;
+          max-width: 3rem;
+          height: 100%;
+          align-self: center;
+          justify-self: center;
         }
         p {
-            font-size: 2rem;
-            color: $black;
-            text-transform: uppercase;
-            text-align: center;
-      }
+          font-size: 2rem;
+          color: $black;
+          text-transform: uppercase;
+          text-align: center;
+        }
       }
     }
     .grid {
       position: absolute;
       top: 16rem;
-      right: -53rem;
+      right: -55rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 80rem) {
+  .container {
+    .wrapper {
+    .skill-icon {
+      width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    }
+      .grid {
+      position: absolute;
+      right: -68rem;
+    }
+    }
+  }
+}
+
+@media only screen and (max-width: 48rem) {
+.container {
+    .wrapper {
+    .skill-icon {
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    }
+      .grid {
+      display: none;
+    }
     }
   }
 }

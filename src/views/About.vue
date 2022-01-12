@@ -14,7 +14,7 @@
             learning, programming and pursuing career change. I love programming
             and website design and everything related to it.
           </p>
-          <button>download cv</button>
+          <a href="https://drive.google.com/file/d/1e6uEh4WakgVgT9XGDkCn4GGHeItjieRx/view?usp=sharing" target="_blank">download cv</a>
         </div>
         <div class="portfolio-image">
           <img src="../assets/img/my-portfolio-img-edited.png" alt="my-photo" />
@@ -26,7 +26,8 @@
 </template>
 
 <script>
-export default {};
+export default {
+};
 </script>
 
 <style lang="scss" scoped>
@@ -64,7 +65,7 @@ export default {};
         line-height: 1.5;
         z-index: 0;
       }
-      button {
+      a {
         background-color: $darkblue;
         color: $white;
         font-size: 1.8rem;
@@ -77,6 +78,8 @@ export default {};
         width: 100%;
         max-width: 30rem;
         max-height: 8rem;
+        text-decoration: none;
+        text-align: center;
         box-shadow: 14px 14px 44px -1px rgba(59, 68, 75, 0.29);
         -webkit-box-shadow: 14px 14px 44px -1px rgba(59, 68, 75, 0.29);
         -moz-box-shadow: 14px 14px 44px -1px rgba(59, 68, 75, 0.29);
@@ -127,7 +130,7 @@ export default {};
         p {
           font-size: 1.2rem;
         }
-        button {
+        a {
           margin-top: 3.5rem;
         }
       }
@@ -148,7 +151,7 @@ export default {};
         p {
           font-size: 1.2rem;
         }
-        button {
+        a {
           font-size: 1.2rem;
           padding: 1rem 1.25rem;
         }
@@ -166,7 +169,7 @@ export default {};
         p {
           font-size: 1.2rem;
         }
-        button {
+        a {
           font-size: 1.2rem;
           padding: 1rem 1.25rem;
         }

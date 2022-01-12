@@ -180,7 +180,7 @@ export default {
       font-size: 1.8rem;
       text-align: left;
       margin: 0;
-      line-height: 2.8rem;
+      line-height: 1.5;
       color: $white;
       width: 85%;
       margin-top: 3rem;
@@ -196,6 +196,7 @@ export default {
           font-size: 1.2rem;
           text-align: left;
           color: $white;
+          margin: 2rem 0;
           a {
             font-size: 1.2rem;
             color: $white;
@@ -229,7 +230,7 @@ export default {
         }
       }
       svg {
-      padding: .2rem;
+        padding: 0.2rem;
         .b {
           fill: $graylight;
         }
@@ -242,6 +243,38 @@ export default {
           fill: $graylight;
           transition-duration: 0.3s;
           cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 80rem) {
+  .container {
+    .wrapper {
+      h1 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+      }
+      .split {
+        .contact-form {
+          margin: 3rem 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 64rem) {
+  .container {
+    .wrapper {
+    grid-template-columns: 1fr;
+
+      .split {
+        .contact-form {
         }
       }
     }

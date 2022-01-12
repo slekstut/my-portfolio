@@ -131,7 +131,7 @@ form {
     flex-wrap: nowrap;
     gap: 1.2rem;
     align-items: center;
-    justify-content: center;  
+    justify-content: center;
     width: 100%;
     margin-top: 1.5rem;
     background: transparent;
@@ -145,14 +145,44 @@ form {
     letter-spacing: 0.1rem;
     text-transform: capitalize;
     transition-duration: 0.3s;
-    &:hover span svg path{
-        stroke: $purple;
+    &:hover span svg path {
+      stroke: $purple;
     }
     &:hover {
       background-color: $white;
       color: $purple;
       cursor: pointer;
     }
+  }
+}
+
+@media only screen and (max-width: 80rem) {
+  form {
+    width: 65%;
+  }
+}
+
+@media only screen and (max-width: 64rem) {
+  form {
+    .floating-input {
+      font-size: 1.2rem;
+    }
+    label {
+      font-size: 1.2rem;
+    }
+    .floating-input:focus ~ label,
+    .floating-input:not(:placeholder-shown) ~ label {
+      font-size: 1rem;
+    }
+    .floating-textarea {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 37.5rem) {
+  form {
+    width: 100%;
   }
 }
 </style>

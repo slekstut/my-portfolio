@@ -154,12 +154,13 @@ export default {};
       justify-content: end;
       grid-template-rows: auto 1fr 1fr;
       h1 {
-      align-self: end;
+        align-self: end;
         justify-self: start;
         color: $darkblue;
-        font-size: 5rem;
+        font-size: 10rem;
+        font-weight: 600;
         margin: 0;
-        text-align: center;
+        text-align: left;
         line-height: 1;
       }
       h3 {
@@ -220,14 +221,75 @@ export default {};
     .wrapper {
       .text {
         h1 {
-          font-size: 3rem;
+          font-size: 7rem;
         }
         h3 {
           font-size: 1.5rem;
-          text-align: center;
+          margin-left: 0;
         }
         h3:after {
           width: 2rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 64rem) {
+  .container {
+    .wrapper {
+      .text {
+        h1 {
+          font-size: 6rem;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 48rem) {
+  .container {
+    .wrapper {
+      .text {
+        h1 {
+          text-align: center;
+        }
+        h3 {
+          font-size: 1rem;
+          justify-self: center;
+        }
+        h3:after {
+          height: 1px;
+        }
+        .call-action {
+          display: inline-block;
+          justify-self: center;
+          width: fit-content;
+          margin-top: 2rem;
+          background: $darkblue;
+          font-size: 0.8rem;
+          border: 1px solid transparent;
+          border-radius: 25px;
+          text-transform: uppercase;
+          padding: 0.8rem 1.2rem;
+          color: $white;
+          font-weight: 700;
+          letter-spacing: 0.1rem;
+          text-transform: capitalize;
+          transition-duration: 0.3s;
+          white-space: nowrap;
+          &:hover {
+            background-color: $white;
+            color: $purple;
+            cursor: pointer;
+          }
+        }
+      }
+      .socials {
+        gap: 0.5rem;
+        svg {
+          width: 2rem;
+          height: 100%;
         }
       }
     }
@@ -239,69 +301,20 @@ export default {};
     .wrapper {
       .text {
         h1 {
-          font-size: 3rem;
-        }
-        h3 {
-          justify-self: center;
-        }
-      }
-      .socials {
-      gap: .5rem;
-      svg {
-        width: 2rem;
-        height: 100%;
-      }
-    }
-    }
-  }
-}
+          font-size: 4rem;
 
-@media only screen and (max-width: 48rem) {
-   .container {
-    .wrapper {
-      .text {
-        h1 {
-          font-size: 3rem;
         }
         h3 {
-          font-size: 1rem;
           justify-self: center;
-        
         }
-        h3:after {
-        height: 1px;
-      }
-      .call-action {
-        display: inline-block;
-          justify-self: center;
-        width: fit-content;
-        margin-top: 2rem;
-        background: $darkblue;
-        font-size: .8rem;
-        border: 1px solid transparent;
-        border-radius: 25px;
-        text-transform: uppercase;
-        padding: 0.8rem 1.2rem;
-        color: $white;
-        font-weight: 700;
-        letter-spacing: 0.1rem;
-        text-transform: capitalize;
-        transition-duration: 0.3s;
-        white-space: nowrap;
-        &:hover {
-          background-color: $white;
-          color: $purple;
-          cursor: pointer;
-        }
-      }
       }
       .socials {
-      gap: .5rem;
-      svg {
-        width: 2rem;
-        height: 100%;
+        gap: 0.5rem;
+        svg {
+          width: 2rem;
+          height: 100%;
+        }
       }
-    }
     }
   }
 }

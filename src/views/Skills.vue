@@ -64,6 +64,7 @@ export default {};
   width: 100%;
   display: grid;
   place-items: center;
+  position: relative;
   .wrapper {
     width: 80%;
     position: relative;

@@ -130,18 +130,58 @@
           ></a>
         </div>
       </div>
+      <transition name="fade">
+        <div id="pagetop" v-show="scY > 300" @click="toTop">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#000"
+            stroke-width="1"
+            stroke-linecap="square"
+            stroke-linejoin="arcs"
+          >
+            <path d="M18 15l-6-6-6 6" />
+          </svg>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      scTimer: 0,
+      scY: 0,
+    };
+  },
   methods: {
     scroll(id) {
       document.getElementById(id).scrollIntoView({
         behavior: "smooth",
       });
     },
+    handleScroll: function () {
+      if (this.scTimer) return;
+      this.scTimer = setTimeout(() => {
+        this.scY = window.scrollY;
+        clearTimeout(this.scTimer);
+        this.scTimer = 0;
+      }, 100);
+    },
+    toTop: function () {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", this.handleScroll);
   },
 };
 </script>
@@ -151,10 +191,12 @@ export default {
   height: 100vh;
   width: 100%;
   padding-top: 3%;
-  top: -0.5rem;
+  top: 0;
+  left: 0;
+  right: 0;
   position: relative;
-  background-image: url("../assets/img/bg-img.png");
-  background-position: center;
+  background-image: url("../assets/img/bg-main.png");
+  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
   display: grid;
@@ -231,6 +273,11 @@ export default {
         }
       }
     }
+  }
+  #pagetop {
+    position: fixed;
+    right: 0;
+    bottom: 0;
   }
 }
 

@@ -106,6 +106,7 @@ export default {};
   margin-top: 13rem;
   .wrapper {
     width: 80%;
+    max-width: 120rem;
     display: grid;
     place-items: center;
     h4 {

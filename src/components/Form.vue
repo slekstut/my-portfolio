@@ -137,7 +137,7 @@ form {
     background: transparent;
     font-size: 1.3rem;
     text-transform: uppercase;
-    border: 2px solid $white;
+    border: 1px solid $white;
     border-radius: 1.2rem;
     padding: 1rem 1.5rem;
     color: $white;

@@ -36,6 +36,7 @@ export default {};
   display: grid;
   place-items: center;
   position: relative;
+  z-index: 0;
   .wrapper {
     width: 80%;
     display: grid;
@@ -61,6 +62,7 @@ export default {};
         text-align: left;
         margin: 0;
         line-height: 1.5;
+        z-index: 0;
       }
       button {
         background-color: $darkblue;
@@ -73,6 +75,8 @@ export default {};
         border-radius: 1.2rem;
         font-weight: 400;
         width: 100%;
+        max-width: 30rem;
+        max-height: 8rem;
         box-shadow: 14px 14px 44px -1px rgba(59, 68, 75, 0.29);
         -webkit-box-shadow: 14px 14px 44px -1px rgba(59, 68, 75, 0.29);
         -moz-box-shadow: 14px 14px 44px -1px rgba(59, 68, 75, 0.29);
@@ -102,7 +106,8 @@ export default {};
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 40rem;
+    height: 100%;
+    max-height: 55rem;
     top: -15rem;
     right: -10rem;
     z-index: 3000;
@@ -114,7 +119,7 @@ export default {};
     .wrapper {
       gap: 4rem;
       .text {
-      gap: 3rem;
+        gap: 3rem;
 
         h1 {
           margin-bottom: 3.5rem;
@@ -138,7 +143,7 @@ export default {};
     .wrapper {
       gap: 1.5rem;
       .text {
-      gap: 2rem;
+        gap: 2rem;
 
         p {
           font-size: 1.2rem;

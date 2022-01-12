@@ -301,11 +301,12 @@ export default {};
     .projects {
       display: grid;
       grid-template-columns: minmax(15rem, 25rem) repeat(5, 1fr);
-      grid-auto-rows: 1fr;
+      grid-auto-rows: minmax(1fr, 40rem);
       gap: 2rem;
       justify-content: center;
       align-items: center;
       width: 100%;
+      max-width: 120rem;
       margin: 10rem 0 13rem 0;
       .box {
         position: relative;
@@ -410,6 +411,7 @@ export default {};
       .projects {
         grid-template-columns: minmax(5rem, 15rem) repeat(5, 1fr);
         grid-auto-rows: minmax(7rem, 20rem);
+        gap: 3rem;
         .box {
           .box__content {
             .box__title {

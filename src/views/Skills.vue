@@ -86,7 +86,7 @@ export default {};
       div {
         display: grid;
         img {
-          max-width: 3rem;
+          max-width: 5rem;
           height: 100%;
           align-self: center;
           justify-self: center;
@@ -110,27 +110,27 @@ export default {};
 @media only screen and (max-width: 80rem) {
   .container {
     .wrapper {
-    .skills {
-      width: 100%;
-      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-    }
+      .skills {
+        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      }
       .grid {
-      position: absolute;
-      right: -68rem;
-    }
+        position: absolute;
+        right: -68rem;
+      }
     }
   }
 }
 
 @media only screen and (max-width: 48rem) {
-.container {
+  .container {
     .wrapper {
-    .skills {
-      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    }
+      .skills {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+      }
       .grid {
-      display: none;
-    }
+        display: none;
+      }
     }
   }
 }

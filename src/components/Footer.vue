@@ -17,11 +17,11 @@ footer {
   width: 100%;
   div {
   width: 80%;
-    border-top: 2px solid $graylighter;
+    border-top: 1px solid $graylighter;
     p {
     color: $white;
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 1rem;
+    font-weight: 200;
     letter-spacing: 0.1rem;
     text-align: center;
   }

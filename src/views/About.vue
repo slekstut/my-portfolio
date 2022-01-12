@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container">
-      <div class="wrapper">
+      <div class="wrapper" id="about">
         <div class="text">
           <h1>about me</h1>
           <p>

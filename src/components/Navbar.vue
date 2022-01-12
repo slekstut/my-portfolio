@@ -4,14 +4,14 @@
       <div class="navigation">
         <div class="logo">Sarunas Lekstutis</div>
         <ul class="navigation__links" :class="{ nav__menu: activeNavbar }">
-          <li>home</li>
-          <li>services</li>
-          <li>projects</li>
-          <li>about</li>
-          <li class="navigation__links-action">contact me</li>
+          <li @click="scroll('home')">home</li>
+          <li @click="scroll('services')">services</li>
+          <li @click="scroll('projects')">projects</li>
+          <li @click="scroll('about')">about</li>
+          <li @click="scroll('contact')" class="navigation__links-action">contact me</li>
         </ul>
         <div class="navigation__button">
-          <button>contact me</button>
+          <button @click="scroll('contact')">contact me</button>
         </div>
         <div
           class="navigation__menu"
@@ -81,6 +81,23 @@ export default {
     return {
       activeNavbar: false,
     };
+  },
+  methods: {
+    scroll(id) {
+      document.getElementById(id).scrollIntoView({
+        behavior: "smooth",
+      });
+      this.activeNavbar = false;
+    },
+  },
+  watch: {
+    activeNavbar() {
+      if (this.activeNavbar) {
+        document.documentElement.style.overflow = "hidden";
+        return;
+      }
+      document.documentElement.style.overflow = "auto";
+    },
   },
 };
 </script>
@@ -201,18 +218,15 @@ export default {
         }
       }
       .navigation__button {
-        button {
-          display: none;
-          opacity: 0;
-          visibility: hidden;
-        }
+        display: none;
+        opacity: 0;
+        visibility: hidden;
       }
-      .hamburger {
+      .navigation__menu {
         position: absolute;
         right: 2rem;
         top: 2rem;
         display: block;
-        float: right;
         padding: 0.4rem;
         margin: 0;
         &:hover {

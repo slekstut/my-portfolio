@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container">
-      <div class="wrapper">
+      <div class="wrapper" id="contact">
         <div class="split">
           <div>
             <h1>Let's discuss for a project</h1>
@@ -178,6 +178,7 @@ export default {
     }
     p {
       font-size: 1.8rem;
+      font-weight: 200;
       text-align: left;
       margin: 0;
       line-height: 1.5;

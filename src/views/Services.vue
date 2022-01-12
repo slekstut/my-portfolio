@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container">
-      <div class="wrapper">
+      <div class="wrapper" id="services">
         <h4>service provided</h4>
         <h1>build digital projects</h1>
         <div class="services">
@@ -84,7 +84,7 @@
             </svg>
             <h5>UI/UX design</h5>
             <p>
-              Modern website design according standards of interface and user
+              Modern website design according standards of user interface and user
               expierence.
             </p>
           </div>
@@ -267,18 +267,19 @@ export default {};
       .services {
         gap: 1.5rem;
         margin-bottom: 4rem;
-
         .box {
-          padding: 1.2rem 1.3rem;
+          padding: 1rem;
+          margin-bottom: 2rem;
           svg {
             width: 2rem;
           }
           h5 {
-            font-size: 1rem;
-            margin: 0.5rem 0;
+            font-size: 2rem;
+            margin: 1rem 0;
           }
           p {
-            font-size: 0.75rem;
+            font-size: 1.2rem;
+            margin: 1rem 0;
           }
           svg {
             width: 1.8rem;

@@ -1,11 +1,13 @@
 <template>
   <div>
     <div class="container">
-      <div class="wrapper">
+      <div class="wrapper" id="home">
         <div class="text">
           <h1>Hello this is Sarunas</h1>
           <h3>front end developer</h3>
-          <button class="call-action">check my projects</button>
+          <a @click="scroll('projects')"
+            ><button class="call-action">check my projects</button></a
+          >
         </div>
         <div class="socials">
           <svg
@@ -127,7 +129,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    scroll(id) {
+      document.getElementById(id).scrollIntoView({
+        behavior: "smooth",
+      });
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -261,27 +271,30 @@ export default {};
         h3:after {
           height: 1px;
         }
-        .call-action {
-          display: inline-block;
-          justify-self: center;
-          width: fit-content;
-          margin-top: 2rem;
-          background: $darkblue;
-          font-size: 0.8rem;
-          border: 1px solid transparent;
-          border-radius: 25px;
-          text-transform: uppercase;
-          padding: 0.8rem 1.2rem;
-          color: $white;
-          font-weight: 700;
-          letter-spacing: 0.1rem;
-          text-transform: capitalize;
-          transition-duration: 0.3s;
-          white-space: nowrap;
-          &:hover {
-            background-color: $white;
-            color: $purple;
-            cursor: pointer;
+        a {
+          margin: 0 auto;
+          .call-action {
+            display: inline-block;
+            justify-self: center;
+            width: auto;
+            margin-top: 2rem;
+            background: $darkblue;
+            font-size: 0.8rem;
+            border: 1px solid transparent;
+            border-radius: 25px;
+            text-transform: uppercase;
+            padding: 1rem 2rem;
+            color: $white;
+            font-weight: 700;
+            letter-spacing: 0.1rem;
+            text-transform: capitalize;
+            transition-duration: 0.3s;
+            white-space: nowrap;
+            &:hover {
+              background-color: $white;
+              color: $purple;
+              cursor: pointer;
+            }
           }
         }
       }
@@ -302,7 +315,6 @@ export default {};
       .text {
         h1 {
           font-size: 4rem;
-
         }
         h3 {
           justify-self: center;

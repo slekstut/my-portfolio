@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container">
-      <div class="wrapper">
+      <div class="wrapper" id="projects">
         <h4>Portfolios</h4>
         <h1>some of my latest projects</h1>
         <div class="projects">
@@ -280,7 +280,7 @@ export default {};
   position: relative;
   .wrapper {
     width: 80%;
-    box__title-align: center;
+    text-align: center;
     display: grid;
     place-items: center;
     h4 {
@@ -289,14 +289,14 @@ export default {};
       margin-top: 10rem;
       font-weight: 200;
       letter-spacing: 0.2rem;
-      box__title-transform: uppercase;
+      text-transform: uppercase;
     }
     h1 {
       color: $white;
       font-size: 5rem;
       font-weight: 600;
       margin: 0;
-      box__title-transform: uppercase;
+      text-transform: uppercase;
     }
     .projects {
       display: grid;
@@ -334,7 +334,7 @@ export default {};
           top: 50%;
           left: 50%;
           width: 80%;
-          box__title-align: center;
+          text-align: center;
           transition: 0.5s ease;
           transform: translate(-50%, -50%);
           -ms-transform: translate(-50%, -50%);

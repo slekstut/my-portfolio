@@ -39,6 +39,7 @@ export default {
 <style lang="scss">
 html {
   box-sizing: border-box;
+  scroll-behavior:smooth;
 }
 *,
 *:before,

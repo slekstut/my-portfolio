@@ -8,3 +8,34 @@ $darkblue: #25215E;
 $font: 'Source Sans Pro',
 sans-serif;
 $fontSize: 16px;
+.error-msg {
+    color: red;
+    font-weight: 200;
+    margin-top: 1rem;
+}
+
+.error-label {
+    color: red;
+}
+
+.success-message {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 25px;
+    padding: 1rem;
+    background-color: #DFF2BF;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    svg {
+        height: 2rem;
+    }
+    svg path {
+        fill: #4F8A10;
+    }
+    span {
+        font-size: 400;
+        font-weight: 200;
+        color: #4F8A10;
+    }
+}

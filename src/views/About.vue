@@ -14,7 +14,13 @@
             learning, programming and pursuing career change. I love programming
             and website design and everything related to it.
           </p>
-          <a href="https://drive.google.com/file/d/1e6uEh4WakgVgT9XGDkCn4GGHeItjieRx/view?usp=sharing" target="_blank">download cv</a>
+          <div class="cv-btn">
+            <a
+              href="https://drive.google.com/file/d/1e6uEh4WakgVgT9XGDkCn4GGHeItjieRx/view?usp=sharing"
+              target="_blank"
+              >download cv</a
+            >
+          </div>
         </div>
         <div class="portfolio-image">
           <img src="../assets/img/my-portfolio-img-edited.png" alt="my-photo" />
@@ -26,8 +32,7 @@
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
@@ -65,32 +70,39 @@ export default {
         line-height: 1.5;
         z-index: 0;
       }
-      a {
-        background-color: $darkblue;
-        color: $white;
-        font-size: 1.8rem;
+      .cv-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 50rem;
+        max-height: 8rem;
         padding: 2rem 2.5rem;
-        text-transform: uppercase;
-        letter-spacing: 0.25rem;
         border: 1px solid transparent;
         border-radius: 1.2rem;
-        font-weight: 400;
-        width: 100%;
-        max-width: 30rem;
-        max-height: 8rem;
-        text-decoration: none;
-        text-align: center;
+        background-color: $darkblue;
         box-shadow: 14px 14px 44px -1px rgba(59, 68, 75, 0.29);
         -webkit-box-shadow: 14px 14px 44px -1px rgba(59, 68, 75, 0.29);
         -moz-box-shadow: 14px 14px 44px -1px rgba(59, 68, 75, 0.29);
+        a {
+          color: $white;
+          font-size: 1.8rem;
+          text-transform: uppercase;
+          letter-spacing: 0.25rem;
+          font-weight: 400;
+          text-decoration: none;
+        }
         &:hover {
-          color: $darkblue;
           background-color: $white;
           border: 1px solid $darkblue;
           border-radius: 1.2rem;
-          font-weight: 400;
           cursor: pointer;
           transition: all 0.5s ease-out;
+        }
+        &:hover a {
+          color: $darkblue;
+          font-weight: 400;
+          background-color: transparent;
         }
       }
     }
@@ -123,14 +135,14 @@ export default {
       gap: 4rem;
       .text {
         gap: 3rem;
-
         h1 {
           margin-bottom: 3.5rem;
         }
         p {
           font-size: 1.2rem;
         }
-        a {
+        .cv-btn {
+          padding: 1rem 1.25rem;
           margin-top: 3.5rem;
         }
       }
@@ -147,12 +159,10 @@ export default {
       gap: 1.5rem;
       .text {
         gap: 2rem;
-
         p {
           font-size: 1.2rem;
         }
-        a {
-          font-size: 1.2rem;
+        .cv-btn {
           padding: 1rem 1.25rem;
         }
       }
@@ -169,9 +179,10 @@ export default {
         p {
           font-size: 1.2rem;
         }
-        a {
-          font-size: 1.2rem;
-          padding: 1rem 1.25rem;
+        .cv-btn {
+          a {
+            font-size: 1.2rem;
+          }
         }
       }
     }

@@ -1,61 +1,169 @@
 <template>
   <div>
-    <form>
+    <form id="form-a" @submit.prevent="sendEmail">
       <div class="floating-label">
-        <input class="floating-input" type="text" placeholder=" " />
+        <input
+          class="floating-input"
+          type="text"
+          placeholder=" "
+          name="name"
+          v-model="state.name"
+        />
         <span class="highlight"></span>
-        <label>your email</label>
+        <label>Name</label>
+        <div :class="{ error: v$.name.$errors.length }">
+          <div v-for="error of v$.name.$errors" :key="error.$uid">
+            <div class="error-msg">{{ error.$message }}</div>
+          </div>
+        </div>
       </div>
 
+      <div class="floating-label">
+        <input
+          class="floating-input"
+          type="email"
+          placeholder=" "
+          name="email"
+          v-model="state.email"
+        />
+        <span class="highlight"></span>
+        <label>email</label>
+        <div :class="{ error: v$.email.$errors.length }">
+          <div v-for="error of v$.email.$errors" :key="error.$uid">
+            <div class="error-msg">{{ error.$message }}</div>
+          </div>
+        </div>
+      </div>
       <div class="floating-label">
         <textarea
           class="floating-input floating-textarea"
           placeholder=" "
+          name="message"
+          v-model="state.message"
         ></textarea>
         <span class="highlight"></span>
         <label>your message</label>
+        <div :class="{ error: v$.message.$errors.length }">
+          <div v-for="error of v$.message.$errors" :key="error.$uid">
+            <div class="error-msg">{{ error.$message }}</div>
+          </div>
+        </div>
       </div>
-      <button>
-        send<span
-          ><svg
+      <div v-if="!state.isLoading">
+        <input type="submit" value="Send" class="submit-btn" />
+      </div>
+      <div v-if="state.isLoading">
+        <input
+          type="submit"
+          value="Sending..."
+          class="submit-btn"
+          :class="{ disabled: state.isLoading }"
+        />
+      </div>
+      <div v-if="state.successMsg" class="success-message">
+        <span>
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            data-prefix="fas"
+            data-icon="check"
+            class="svg-inline--fa fa-check fa-w-16"
+            role="img"
             xmlns="http://www.w3.org/2000/svg"
-            width="33.621"
-            height="33.621"
-            viewBox="0 0 33.621 33.621"
+            viewBox="0 0 512 512"
           >
-            <g transform="translate(-1.5 -0.879)">
-              <path
-                d="M33,3,16.5,19.5"
-                fill="none"
-                stroke="#fff"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="3"
-              />
-              <path
-                d="M33,3,22.5,33l-6-13.5L3,13.5Z"
-                fill="none"
-                stroke="#fff"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="3"
-              />
-            </g></svg
+            <path
+              fill="currentColor"
+              d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"
+            ></path></svg
         ></span>
-      </button>
+        <span
+          >Thank you! Your message is sent successfully, I will contact you
+          ASAP.</span
+        >
+      </div>
     </form>
   </div>
 </template>
 
 <script>
+import emailjs from "@emailjs/browser";
+import { reactive } from "vue";
+import useVuelidate from "@vuelidate/core";
+import { required, email } from "@vuelidate/validators";
+
 export default {
   name: "Form",
+  setup() {
+    const state = reactive({
+      name: "",
+      email: "",
+      message: "",
+      isLoading: false,
+      successMsg: false,
+    });
+    const rules = {
+      name: { required },
+      email: { required, email },
+      message: { required },
+    };
+
+    const v$ = useVuelidate(rules, state);
+
+    return { state, v$ };
+  },
+  methods: {
+    async sendEmail() {
+      this.state.isLoading = true;
+      const result = await this.v$.$validate();
+      if (!result) {
+        console.log("some error");
+        this.state.isLoading = false;
+        return;
+      } else {
+        setTimeout(() => {
+          emailjs
+            .sendForm(
+              process.env.VUE_APP_MY_SERVICE_ID,
+              process.env.VUE_APP_MY_TEMPLATE_ID,
+              "#form-a",
+              process.env.VUE_APP_MY_USER_ID
+            )
+            .then(
+              (result) => {
+                console.log("SUCCESS!", result.text);
+              },
+              (error) => {
+                console.log("FAILED...", error.text);
+              }
+            );
+          this.state.isLoading = false;
+          this.state.successMsg = true;
+          this.resetForm();
+        }, 2000);
+        setTimeout(() => {
+          this.state.successMsg = false;
+        }, 10000);
+      }
+    },
+    async resetForm() {
+      const result = await this.v$.$reset();
+      if (!result) {
+        this.state.name = "";
+        this.state.email = "";
+        this.state.message = "";
+      }
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
 form {
-  width: 35%;
+  width: 50%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
   .floating-label {
     position: relative;
     margin-bottom: 1.3rem;
@@ -67,7 +175,6 @@ form {
     letter-spacing: 0.05rem;
     color: $white;
     padding: 0.1rem 0;
-    margin-bottom: 4rem;
     display: block;
     width: 100%;
     height: 3.2rem;
@@ -126,7 +233,7 @@ form {
     -moz-animation: 0.3s ease;
     animation: 0.3s ease;
   }
-  button {
+  .submit-btn {
     display: inline-flex;
     flex-wrap: nowrap;
     gap: 1.2rem;
@@ -145,14 +252,14 @@ form {
     letter-spacing: 0.1rem;
     text-transform: capitalize;
     transition-duration: 0.3s;
-    &:hover span svg path {
-      stroke: $purple;
-    }
     &:hover {
       background-color: $white;
       color: $purple;
       cursor: pointer;
     }
+  }
+  .disabled {
+    pointer-events: none;
   }
 }
 

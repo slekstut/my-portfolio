@@ -278,6 +278,9 @@ export default {
     position: fixed;
     right: 0;
     bottom: 0;
+    svg  {
+      stroke: $purple;
+    }
   }
 }
 

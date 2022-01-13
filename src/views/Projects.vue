@@ -13,7 +13,7 @@
             />
             <div class="box__content">
               <div class="box__title">
-                <p>Project #1</p>
+                <p>A CRUD Operation Web App (Incomming...)</p>
                 <div class="box__icons">
                   <a href="#"
                     ><svg
@@ -77,7 +77,7 @@
             />
             <div class="box__content">
               <div class="box__title">
-                <p>Project #3</p>
+                <p>REST API (incomming...)</p>
                 <div class="box__icons">
                   <a href="#"
                     ><svg
@@ -141,9 +141,11 @@
             />
             <div class="box__content">
               <div class="box__title">
-                <p>Project #2</p>
+                <p>e-commerce-product-page</p>
                 <div class="box__icons">
-                  <a href="#"
+                  <a
+                    href="https://github.com/slekstut/e-commerce-product-page"
+                    target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="80"
@@ -181,7 +183,9 @@
                         transform="translate(18.701 11.3)"
                       /></svg
                   ></a>
-                  <a href="#"
+                  <a
+                    href="https://slekstut.github.io/e-commerce-product-page/"
+                    target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="40.5"
@@ -205,9 +209,9 @@
             />
             <div class="box__content">
               <div class="box__title">
-                <p>Project #4</p>
+                <p>my-portfolio</p>
                 <div class="box__icons">
-                  <a href="#"
+                  <a href="https://github.com/slekstut/my-portfolio" target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="80"

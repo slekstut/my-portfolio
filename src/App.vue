@@ -40,6 +40,7 @@ export default {
 html {
   box-sizing: border-box;
   scroll-behavior:smooth;
+
 }
 *,
 *:before,
@@ -60,6 +61,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
-
 }
 </style>

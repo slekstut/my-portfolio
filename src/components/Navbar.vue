@@ -154,7 +154,7 @@ export default {
         border: 1px solid transparent;
         border-radius: 25px;
         text-transform: uppercase;
-        padding: 0.5rem 1.5rem;
+        padding: 0.8rem 2.5rem;
         color: $white;
         font-weight: 700;
         letter-spacing: 0.1rem;

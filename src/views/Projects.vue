@@ -53,7 +53,7 @@
                         transform="translate(18.701 11.3)"
                       /></svg
                   ></a>
-                  <a href="https://github.com/slekstut/my-portfolio" target="_blank"
+                  <a href="www.sarunasdev.com" target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="40.5"

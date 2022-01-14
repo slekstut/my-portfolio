@@ -278,8 +278,12 @@ export default {
     position: fixed;
     right: 0;
     bottom: 0;
+    z-index: 9999;
     svg  {
       stroke: $purple;
+    }
+    :hover {
+      cursor: pointer;
     }
   }
 }

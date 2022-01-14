@@ -13,9 +13,9 @@
             />
             <div class="box__content">
               <div class="box__title">
-                <p>A CRUD Operation Web App (Incomming...)</p>
+                <p>My Portfolio Website</p>
                 <div class="box__icons">
-                  <a href="#"
+                  <a href="https://github.com/slekstut/my-portfolio" target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="80"
@@ -53,7 +53,7 @@
                         transform="translate(18.701 11.3)"
                       /></svg
                   ></a>
-                  <a href="#"
+                  <a href="https://github.com/slekstut/my-portfolio" target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="40.5"
@@ -141,7 +141,7 @@
             />
             <div class="box__content">
               <div class="box__title">
-                <p>e-commerce-product-page</p>
+                <p>eCommerce Product Page</p>
                 <div class="box__icons">
                   <a
                     href="https://github.com/slekstut/e-commerce-product-page"
@@ -209,9 +209,9 @@
             />
             <div class="box__content">
               <div class="box__title">
-                <p>my-portfolio</p>
+                <p>Todo App (VUE/NODE)</p>
                 <div class="box__icons">
-                  <a href="https://github.com/slekstut/my-portfolio" target="_blank"
+                  <a href="https://github.com/slekstut/vue-node-todoApp" target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="80"
@@ -249,7 +249,7 @@
                         transform="translate(18.701 11.3)"
                       /></svg
                   ></a>
-                  <a href="#"
+                  <a href="https://github.com/slekstut/vue-node-todoApp" target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="40.5"
@@ -338,7 +338,7 @@ export default {};
           opacity: 0;
           top: 50%;
           left: 50%;
-          width: 80%;
+          width: 95%;
           text-align: center;
           transition: 0.5s ease;
           transform: translate(-50%, -50%);
@@ -352,10 +352,9 @@ export default {};
             grid-auto-rows: 1fr;
             gap: 1rem;
             p {
-              font-size: 3rem;
+              font-size: 2.5rem;
               color: $white;
               margin: 0;
-              margin-bottom: 1rem;
               grid-column: span 2;
             }
             .box__icons {
@@ -363,8 +362,12 @@ export default {};
               grid-template-columns: 1fr 1fr;
               justify-content: center;
               align-items: center;
-              gap: 0.2rem;
+              gap: 1rem;
               a {
+                svg {
+                width: 3rem;
+
+                }
                 &:hover {
                   svg .a {
                     fill: $white;

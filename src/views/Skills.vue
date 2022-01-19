@@ -33,7 +33,7 @@
             <p>node js</p>
           </div>
           <div>
-            <img src="../assets/icons/adobexd.png" alt="adobe-xd" />
+            <img src="../assets/img/adobe-xd.png" alt="adobe-xd" />
             <p>adobe xd</p>
           </div>
           <div>

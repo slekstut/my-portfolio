@@ -16,7 +16,7 @@
           </p>
           <div class="cv-btn">
             <a
-              href="https://drive.google.com/file/d/1e6uEh4WakgVgT9XGDkCn4GGHeItjieRx/view?usp=sharing"
+              href="https://drive.google.com/file/d/1tnCvAHHN5hw6DBJZVVF4uE70zDL81xut/view?usp=sharing"
               target="_blank"
               >download cv</a
             >

@@ -77,9 +77,9 @@
             />
             <div class="box__content">
               <div class="box__title">
-                <p>REST API (incomming...)</p>
+                <p>IP Address Tracker</p>
                 <div class="box__icons">
-                  <a href="#"
+                  <a href="https://github.com/slekstut/ip-address-tracker" target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="80"
@@ -117,7 +117,7 @@
                         transform="translate(18.701 11.3)"
                       /></svg
                   ></a>
-                  <a href="#"
+                  <a href="https://slekstut.github.io/ip-address-tracker/" target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="40.5"
@@ -211,7 +211,7 @@
               <div class="box__title">
                 <p>Todo App (VUE/NODE)</p>
                 <div class="box__icons">
-                  <a href="https://github.com/slekstut/vue-node-todoApp" target="_blank"
+                  <a href="https://github.com/slekstut/todo-vue" target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="80"
@@ -249,7 +249,7 @@
                         transform="translate(18.701 11.3)"
                       /></svg
                   ></a>
-                  <a href="https://github.com/slekstut/vue-node-todoApp" target="_blank"
+                  <a href="https://github.com/slekstut/todo-vue" target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="40.5"

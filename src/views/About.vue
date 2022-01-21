@@ -14,12 +14,8 @@
             learning, programming and pursuing career change. I love programming
             and website design and everything related to it.
           </p>
-          <div class="cv-btn">
-            <a
-              href="https://drive.google.com/file/d/1tnCvAHHN5hw6DBJZVVF4uE70zDL81xut/view?usp=sharing"
-              target="_blank"
-              >download cv</a
-            >
+          <div>
+            <DownloadCv>Download CV</DownloadCv>
           </div>
         </div>
         <div class="portfolio-image">
@@ -32,7 +28,11 @@
 </template>
 
 <script>
-export default {};
+import DownloadCv from "../components/ButtonMain.vue";
+export default {
+  name: "About",
+  components: { DownloadCv },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -70,41 +70,6 @@ export default {};
         line-height: 1.5;
         z-index: 0;
       }
-      .cv-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        max-width: 50rem;
-        max-height: 8rem;
-        padding: 2rem 2.5rem;
-        border: 1px solid transparent;
-        border-radius: 1.2rem;
-        background-color: $darkblue;
-        box-shadow: 14px 14px 44px -1px rgba(59, 68, 75, 0.29);
-        -webkit-box-shadow: 14px 14px 44px -1px rgba(59, 68, 75, 0.29);
-        -moz-box-shadow: 14px 14px 44px -1px rgba(59, 68, 75, 0.29);
-        a {
-          color: $white;
-          font-size: 1.8rem;
-          text-transform: uppercase;
-          letter-spacing: 0.25rem;
-          font-weight: 400;
-          text-decoration: none;
-        }
-        &:hover {
-          background-color: $white;
-          border: 1px solid $darkblue;
-          border-radius: 1.2rem;
-          cursor: pointer;
-          transition: all 0.5s ease-out;
-        }
-        &:hover a {
-          color: $darkblue;
-          font-weight: 400;
-          background-color: transparent;
-        }
-      }
     }
     .portfolio-image {
       display: grid;
@@ -137,6 +102,7 @@ export default {};
         gap: 3rem;
         h1 {
           margin-bottom: 3.5rem;
+        font-size: 3rem;
         }
         p {
           font-size: 1.2rem;
@@ -157,6 +123,7 @@ export default {};
   .container {
     .wrapper {
       gap: 1.5rem;
+      text-align: left;
       .text {
         gap: 2rem;
         p {

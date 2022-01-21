@@ -5,9 +5,9 @@
         <div class="text">
           <h1>Hello this is Sarunas</h1>
           <h3>front end developer</h3>
-          <a @click="scroll('projects')"
-            ><button class="call-action">check my projects</button></a
-          >
+          <div>
+            <ContactBtn>Check My Work</ContactBtn>
+          </div>
         </div>
         <div class="socials">
           <a
@@ -152,7 +152,10 @@
 </template>
 
 <script>
+import ContactBtn from "../components/ButtonMain.vue";
 export default {
+  name: "Main",
+  components: { ContactBtn },
   data() {
     return {
       scTimer: 0,
@@ -251,9 +254,9 @@ export default {
         border-radius: 5px;
         transition: all 0.5s ease-out;
       }
-      .call-action {
-        display: none;
-      }
+    }
+    .text > *:last-child {
+      margin-top: 5rem;
     }
     .socials {
       justify-self: end;
@@ -279,7 +282,7 @@ export default {
     right: 0;
     bottom: 0;
     z-index: 9999;
-    svg  {
+    svg {
       stroke: $purple;
     }
     :hover {
@@ -335,29 +338,6 @@ export default {
         }
         a {
           margin: 0 auto;
-          .call-action {
-            display: inline-block;
-            justify-self: center;
-            width: auto;
-            margin-top: 2rem;
-            background: $darkblue;
-            font-size: 0.8rem;
-            border: 1px solid transparent;
-            border-radius: 25px;
-            text-transform: uppercase;
-            padding: 1rem 2rem;
-            color: $white;
-            font-weight: 700;
-            letter-spacing: 0.1rem;
-            text-transform: capitalize;
-            transition-duration: 0.3s;
-            white-space: nowrap;
-            &:hover {
-              background-color: $white;
-              color: $purple;
-              cursor: pointer;
-            }
-          }
         }
       }
       .socials {

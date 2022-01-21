@@ -84,8 +84,8 @@
             </svg>
             <h5>UI/UX design</h5>
             <p>
-              Modern website design according standards of user interface and user
-              expierence.
+              Modern website design according standards of user interface and
+              user expierence.
             </p>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default {};
       position: relative;
       &:before {
         content: "";
-        width: 0.15rem;
+        width: 0.1rem;
         height: 5.5rem;
         position: absolute;
         background: $black;
@@ -168,6 +168,7 @@ export default {};
         }
         p {
           font-size: 1.8rem;
+          font-weight: 200;
           color: $black;
           text-align: center;
           margin: 0;
@@ -201,6 +202,12 @@ export default {};
 @media only screen and (max-width: 80rem) {
   .container {
     .wrapper {
+      h4 {
+        font-size: 1rem;
+      }
+      h1 {
+        font-size: 3rem;
+      }
       .services {
         .box {
           h5 {
@@ -268,9 +275,11 @@ export default {};
       .services {
         gap: 1.5rem;
         margin-bottom: 4rem;
+        grid-template-columns: 1fr;
         .box {
-          padding: 1rem;
           margin-bottom: 2rem;
+          width: 60%;
+          padding: 2rem;
           svg {
             width: 2rem;
           }
@@ -281,6 +290,7 @@ export default {};
           p {
             font-size: 1.2rem;
             margin: 1rem 0;
+            width: 80%;
           }
           svg {
             width: 1.8rem;
@@ -292,33 +302,14 @@ export default {};
   }
 }
 
-@media only screen and (max-width: 48rem) {
+@media only screen and (max-width: 37.5rem) {
   .container {
+    margin-top: 8rem;
     .wrapper {
       .services {
-        grid-template-columns: 1fr;
         .box {
-          width: 60%;
+          width: 100%;
           padding: 2rem;
-          p {
-            width: 80%;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (max-width: 48rem) {
-   .container {
-    .wrapper {
-      .services {
-        .box {
-          width: 80%;
-          padding: 1rem;
-          p {
-            width: 80%;
-          }
         }
       }
     }

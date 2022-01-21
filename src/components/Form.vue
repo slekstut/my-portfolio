@@ -17,7 +17,6 @@
           </div>
         </div>
       </div>
-
       <div class="floating-label">
         <input
           class="floating-input"
@@ -271,6 +270,7 @@ form {
 
 @media only screen and (max-width: 64rem) {
   form {
+    width: 100%;
     .floating-input {
       font-size: 1.2rem;
     }
@@ -290,6 +290,19 @@ form {
 @media only screen and (max-width: 37.5rem) {
   form {
     width: 100%;
+    .floating-input {
+      font-size: 0.8rem;
+    }
+    label {
+      font-size: 0.8rem;
+    }
+    .floating-input:focus ~ label,
+    .floating-input:not(:placeholder-shown) ~ label {
+      font-size: 0.6rem;
+    }
+    .floating-textarea {
+      font-size: 0.8rem;
+    }
   }
 }
 </style>

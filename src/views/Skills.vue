@@ -86,13 +86,14 @@ export default {};
       div {
         display: grid;
         img {
-          max-width: 5rem;
+          width: 5rem;
           height: 100%;
           align-self: center;
           justify-self: center;
         }
         p {
-          font-size: 2rem;
+          font-size: 1.5rem;
+          font-weight: 200;
           color: $black;
           text-transform: uppercase;
           text-align: center;
@@ -110,6 +111,9 @@ export default {};
 @media only screen and (max-width: 80rem) {
   .container {
     .wrapper {
+      h1 {
+        font-size: 3rem;
+      }
       .skills {
         width: 100%;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
@@ -122,11 +126,27 @@ export default {};
   }
 }
 
+@media only screen and (max-width: 64rem) {
+  .container {
+    .wrapper {
+      h1 {
+        text-align: center;
+      }
+    }
+  }
+}
+
 @media only screen and (max-width: 48rem) {
   .container {
     .wrapper {
       .skills {
-        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+        div p {
+          font-size: 1rem;
+        }
+        div img {
+          width: 3rem;
+        }
       }
       .grid {
         display: none;

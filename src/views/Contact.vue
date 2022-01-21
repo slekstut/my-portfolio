@@ -236,7 +236,7 @@ export default {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: 1fr 1fr;
-      gap: 0.5rem;
+      gap: 1rem;
       justify-items: center;
       align-items: center;
       margin-bottom: 6rem;
@@ -294,10 +294,71 @@ export default {
   .container {
     .wrapper {
       grid-template-columns: 1fr;
+      .split {
+      display: grid;
+        justify-content: center;
+      div{
+        text-align: center;
+      }
+       p{
+        margin: 0 auto;
+        margin-top: 1.5rem;
+        width: 60%;
+        text-align: center;
+      }
+      }
+      .contact-form {
+        display: grid;
+        justify-content: center;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+    .contact-links {
+      .links {
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+      }
+      .links a {
+        font-size: 1.2rem;
+        align-self: end;
+      }
+      .links svg {
+        width: 80%;
+      }
+    }
+  }
+}
 
+@media only screen and (max-width: 48rem) {
+  .container {
+    .wrapper {
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 500;
+      }
+      p {
+        font-size: 1.2rem;
+        margin-top: 1.5rem;
+      }
       .split {
         .contact-form {
+          margin: 3rem 0;
         }
+      }
+    }
+    .contact-links {
+      .links {
+        margin-bottom: 1.5rem;
+      }
+      .links a {
+        font-size: 1rem;
+        align-self: end;
+      }
+      .links svg {
+        width: 80%;
       }
     }
   }

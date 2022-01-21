@@ -8,10 +8,12 @@
           <li @click="scroll('services')">services</li>
           <li @click="scroll('projects')">projects</li>
           <li @click="scroll('about')">about</li>
-          <li @click="scroll('contact')" class="navigation__links-action">contact me</li>
+          <li @click="scroll('contact')" class="navigation__links-action">
+            contact me
+          </li>
         </ul>
-        <div class="navigation__button">
-          <button @click="scroll('contact')">contact me</button>
+        <div class="call-action">
+          <ContactBtn>contact me</ContactBtn>
         </div>
         <div
           class="navigation__menu"
@@ -75,8 +77,11 @@
 </template>
 
 <script>
+import ContactBtn from "../components/ButtonMain.vue";
+
 export default {
   name: "Navbar",
+  components: { ContactBtn },
   data() {
     return {
       activeNavbar: false,
@@ -145,29 +150,6 @@ export default {
         display: none;
       }
     }
-    .navigation__button {
-      display: grid;
-      place-items: center;
-      button {
-        background: $darkblue;
-        font-size: 1.3rem;
-        border: 1px solid transparent;
-        border-radius: 25px;
-        text-transform: uppercase;
-        padding: 0.8rem 2.5rem;
-        color: $white;
-        font-weight: 700;
-        letter-spacing: 0.1rem;
-        text-transform: capitalize;
-        transition-duration: 0.3s;
-        white-space: nowrap;
-        &:hover {
-          background-color: $white;
-          color: $purple;
-          cursor: pointer;
-        }
-      }
-    }
     .close-btn {
       display: none;
     }
@@ -183,12 +165,6 @@ export default {
       .navigation__links {
         li {
           font-size: 0.8rem;
-        }
-      }
-      .navigation__button {
-        button {
-          font-size: 0.8rem;
-          text-transform: uppercase;
         }
       }
     }
@@ -217,11 +193,7 @@ export default {
           display: block;
         }
       }
-      .navigation__button {
-        display: none;
-        opacity: 0;
-        visibility: hidden;
-      }
+
       .navigation__menu {
         position: absolute;
         right: 2rem;
@@ -272,6 +244,9 @@ export default {
       }
       .close-btn svg path {
         fill: $white;
+      }
+      .call-action {
+        display: none;
       }
     }
   }

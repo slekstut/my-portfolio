@@ -12,7 +12,7 @@
             contact me
           </li>
         </ul>
-        <div class="call-action">
+        <div class="call-action" @click="scroll('contact')">
           <ContactBtn>contact me</ContactBtn>
         </div>
         <div

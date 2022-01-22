@@ -5,7 +5,7 @@
         <div class="text">
           <h1>Hello this is Sarunas</h1>
           <h3>front end developer</h3>
-          <div>
+          <div @click="scroll('projects')">
             <ContactBtn>Check My Work</ContactBtn>
           </div>
         </div>

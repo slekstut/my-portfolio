@@ -12,12 +12,7 @@
           </div>
           <div class="contact-form">
             <Form></Form>
-            <p>
-              Or email me:
-              <a href="mailto:sarunas.lekstutis@gmail.com" target="_blank"
-                >sarunas.lekstutis@gmail.com</a
-              >
-            </p>
+            
           </div>
         </div>
         <div class="contact-links">
@@ -214,17 +209,6 @@ export default {
       .contact-form {
         width: 100%;
         margin: 6rem 0;
-        p {
-          font-size: 1.2rem;
-          text-align: left;
-          color: $white;
-          margin: 2rem 0;
-          a {
-            font-size: 1.2rem;
-            color: $white;
-            text-decoration: underline;
-          }
-        }
       }
     }
   }
@@ -249,6 +233,7 @@ export default {
           color: $purple;
           opacity: 0.6;
           cursor: pointer;
+          transition-duration: 0.3s;
         }
       }
       svg {
@@ -295,24 +280,20 @@ export default {
     .wrapper {
       grid-template-columns: 1fr;
       .split {
-      display: grid;
+        display: grid;
         justify-content: center;
-      div{
-        text-align: center;
-      }
-       p{
-        margin: 0 auto;
-        margin-top: 1.5rem;
-        width: 60%;
-        text-align: center;
-      }
+        div {
+          text-align: center;
+        }
+        p {
+          margin: 0 auto;
+          margin-top: 1.5rem;
+          width: 60%;
+          text-align: center;
+        }
       }
       .contact-form {
         display: grid;
-        justify-content: center;
-      }
-      p {
-        font-size: 1.2rem;
       }
     }
     .contact-links {
@@ -335,17 +316,24 @@ export default {
 @media only screen and (max-width: 48rem) {
   .container {
     .wrapper {
+      margin: 6rem 0;
       h1 {
         font-size: 2.5rem;
         font-weight: 500;
       }
       p {
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin-top: 1.5rem;
+        font-weight: 200;
       }
       .split {
+        gap: 1.5rem;
         .contact-form {
-          margin: 3rem 0;
+          width: 100%;
+          margin: 3rem 0 0 0;
+        }
+        p {
+          width: 100%;
         }
       }
     }
@@ -358,7 +346,7 @@ export default {
         align-self: end;
       }
       .links svg {
-        width: 80%;
+        width: 2.5rem;
       }
     }
   }

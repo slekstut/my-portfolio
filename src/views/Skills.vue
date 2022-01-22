@@ -138,9 +138,14 @@ export default {};
 
 @media only screen and (max-width: 48rem) {
   .container {
+    margin: 6rem 0;
     .wrapper {
+      h1 {
+          margin-bottom: 6rem;
+        }
       .skills {
         grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+        
         div p {
           font-size: 1rem;
         }

@@ -465,6 +465,9 @@ export default {};
 @media only screen and (max-width: 48rem) {
   .container {
     .wrapper {
+      h4 {
+        margin-top: 6rem;
+      }
       .projects {
         grid-template-columns: minmax(5rem, 15rem) repeat(3, 1fr);
         grid-auto-rows: minmax(4rem, 12rem);
@@ -510,7 +513,7 @@ export default {};
         grid-template-columns: 1fr;
         grid-auto-rows: minmax(4rem, 20rem);
         grid-auto-columns: minmax(2rem, 3rem);
-        gap: 1rem 0;
+        margin: 6rem 0;
         .box {
           .box__content {
             .box__title {

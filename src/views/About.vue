@@ -14,8 +14,14 @@
             learning, programming and pursuing career change. I love programming
             and website design and everything related to it.
           </p>
-          <div>
-            <DownloadCv>Download CV</DownloadCv>
+          <div class="cv-btn">
+            <DownloadCv
+              ><a
+                href="https://drive.google.com/file/d/1tnCvAHHN5hw6DBJZVVF4uE70zDL81xut/view?usp=sharing"
+                target="_blank"
+                >Download CV</a
+              ></DownloadCv
+            >
           </div>
         </div>
         <div class="portfolio-image">
@@ -70,6 +76,15 @@ export default {
         line-height: 1.5;
         z-index: 0;
       }
+      .cv-btn {
+        a {
+          text-decoration: none;
+          color: $white;
+        }
+        &:hover a {
+          color: $darkblue;
+        }
+      }
     }
     .portfolio-image {
       display: grid;
@@ -102,14 +117,10 @@ export default {
         gap: 3rem;
         h1 {
           margin-bottom: 3.5rem;
-        font-size: 3rem;
+          font-size: 3rem;
         }
         p {
           font-size: 1.2rem;
-        }
-        .cv-btn {
-          padding: 1rem 1.25rem;
-          margin-top: 3.5rem;
         }
       }
     }
@@ -129,9 +140,6 @@ export default {
         p {
           font-size: 1.2rem;
         }
-        .cv-btn {
-          padding: 1rem 1.25rem;
-        }
       }
     }
   }
@@ -139,12 +147,16 @@ export default {
 
 @media only screen and (max-width: 48rem) {
   .container {
+    margin: 6rem 0;
     .wrapper {
       grid-template-columns: 1fr;
       gap: 3.5rem;
       .text {
         p {
           font-size: 1.2rem;
+        }
+        div {
+          margin-top: 2rem;
         }
         .cv-btn {
           a {

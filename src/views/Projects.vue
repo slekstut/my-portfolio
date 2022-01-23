@@ -15,7 +15,9 @@
               <div class="box__title">
                 <p>My Portfolio Website</p>
                 <div class="box__icons">
-                  <a href="https://github.com/slekstut/my-portfolio" target="_blank"
+                  <a
+                    href="https://github.com/slekstut/my-portfolio"
+                    target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="80"
@@ -79,7 +81,9 @@
               <div class="box__title">
                 <p>IP Address Tracker</p>
                 <div class="box__icons">
-                  <a href="https://github.com/slekstut/ip-address-tracker" target="_blank"
+                  <a
+                    href="https://github.com/slekstut/ip-address-tracker"
+                    target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="80"
@@ -117,7 +121,9 @@
                         transform="translate(18.701 11.3)"
                       /></svg
                   ></a>
-                  <a href="https://slekstut.github.io/ip-address-tracker/" target="_blank"
+                  <a
+                    href="https://slekstut.github.io/ip-address-tracker/"
+                    target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="40.5"
@@ -365,8 +371,7 @@ export default {};
               gap: 1rem;
               a {
                 svg {
-                width: 3rem;
-
+                  width: 3rem;
                 }
                 &:hover {
                   svg .a {
@@ -445,11 +450,15 @@ export default {};
         grid-auto-rows: minmax(4rem, 12rem);
         gap: 1rem;
         .box {
+          .box__image {
+            opacity: 0.5;
+          }
           .box__content {
+            opacity: 1;
             .box__title {
               gap: 0.3rem;
               p {
-                font-size: 1.6rem;
+                font-size: 1.3rem;
               }
               a svg {
                 width: 60%;

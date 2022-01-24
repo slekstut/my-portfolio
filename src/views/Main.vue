@@ -193,7 +193,7 @@ export default {
 .container {
   height: 100vh;
   width: 100%;
-  padding-top: 3%;
+  padding-top: 25%;
   top: 0;
   left: 0;
   right: 0;

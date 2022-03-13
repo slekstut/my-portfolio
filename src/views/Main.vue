@@ -193,7 +193,6 @@ export default {
 .container {
   height: 100vh;
   width: 100%;
-  padding-top: 25%;
   top: 0;
   left: 0;
   right: 0;
@@ -212,22 +211,24 @@ export default {
       grid-column-start: 1;
       grid-column-end: 4;
       display: grid;
-      justify-content: end;
+      gap: 2rem;
+      justify-content: center;
+      align-items: center;
       grid-template-rows: auto 1fr 1fr;
       h1 {
-        align-self: end;
-        justify-self: start;
+        align-self: center;
+        justify-self: center;
         color: $darkblue;
         font-size: 10rem;
         font-weight: 600;
         margin: 0;
-        text-align: left;
+        text-align: center;
         line-height: 1;
       }
       h3 {
         display: inline-block;
-        align-self: start;
-        justify-self: start;
+        align-self: center;
+        justify-self: center;
         color: $darkblue;
         font-size: 2rem;
         position: relative;
@@ -256,7 +257,7 @@ export default {
       }
     }
     .text > *:last-child {
-      margin-top: 5rem;
+      margin: 0 auto;
     }
     .socials {
       justify-self: end;

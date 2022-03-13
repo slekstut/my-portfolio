@@ -73,7 +73,7 @@
           </div>
           <div class="box">
             <img
-              src="../assets/img/project-2.png"
+              src="../assets/img/project-2.jpg"
               alt="project-2"
               class="box__image"
             />
@@ -141,16 +141,16 @@
           </div>
           <div class="box">
             <img
-              src="../assets/img/project-1.png"
+              src="../assets/img/project-1.jpg"
               alt="project-1"
               class="box__image"
             />
             <div class="box__content">
               <div class="box__title">
-                <p>eCommerce Product Page</p>
+                <p>URL Shortening API</p>
                 <div class="box__icons">
                   <a
-                    href="https://github.com/slekstut/e-commerce-product-page"
+                    href="https://github.com/slekstut/url-shortening-api-master"
                     target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -190,7 +190,7 @@
                       /></svg
                   ></a>
                   <a
-                    href="https://slekstut.github.io/e-commerce-product-page/"
+                    href="https://slekstut.github.io/url-shortening-api-master/"
                     target="_blank"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"

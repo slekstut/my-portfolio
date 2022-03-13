@@ -332,6 +332,7 @@ export default {};
           transition: 0.5s ease;
           backface-visibility: hidden;
           justify-self: center;
+          border-radius: 1rem;
         }
         &:hover .box__image {
           opacity: 0.5;
